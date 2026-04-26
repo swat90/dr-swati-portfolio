@@ -1,78 +1,27 @@
-.section {
-  padding: 6rem 2rem 8rem;
-  position: relative;
-  z-index: 1;
-  text-align: center;
-}
+.section { padding: 6rem 2rem 8rem; position: relative; z-index: 1; text-align: center; background: #ffffff; }
+.container { max-width: 680px; margin: 0 auto; }
 
-.container {
-  max-width: 680px;
-  margin: 0 auto;
-}
+.label { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.75rem; }
+.heading { font-family: 'DM Serif Display', serif; font-size: clamp(2rem, 4vw, 3rem); color: var(--text-primary); margin-bottom: 1rem; }
+.sub { color: var(--text-secondary); font-size: 1rem; font-weight: 300; line-height: 1.7; margin-bottom: 3rem; }
 
-.label {
-  font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--accent);
-  margin-bottom: 0.75rem;
-}
-
-.heading {
-  font-family: 'DM Serif Display', serif;
-  font-size: clamp(2rem, 4vw, 3rem);
-  color: var(--text-primary);
-  margin-bottom: 1rem;
-}
-
-.sub {
-  color: var(--text-secondary);
-  font-size: 1rem;
-  font-weight: 300;
-  line-height: 1.7;
-  margin-bottom: 3rem;
-}
-
-.links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  justify-content: center;
-  margin-bottom: 2.5rem;
-}
+.links { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; margin-bottom: 2.5rem; }
 
 .link {
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  color: var(--text-secondary);
-  padding: 0.65rem 1.2rem;
-  border-radius: var(--radius);
-  font-size: 0.88rem;
-  font-weight: 400;
-  transition: border-color 0.2s, color 0.2s, transform 0.2s;
+  display: flex; align-items: center; gap: 0.6rem;
+  background: #f8f9fc; border: 1.5px solid var(--border);
+  color: var(--text-secondary); padding: 0.65rem 1.2rem;
+  border-radius: var(--radius); font-size: 0.88rem; font-weight: 400;
+  transition: border-color 0.2s, color 0.2s, transform 0.2s, box-shadow 0.2s;
 }
 
 .link:hover {
-  border-color: var(--border-accent);
-  color: var(--accent);
+  border-color: var(--accent); color: var(--accent);
   transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(37,99,235,0.1);
   opacity: 1;
 }
 
-.icon {
-  font-size: 0.8rem;
-  font-weight: 700;
-  color: var(--accent);
-  font-style: normal;
-  min-width: 16px;
-  text-align: center;
-}
+.icon { font-size: 0.85rem; font-weight: 700; color: var(--accent); font-style: normal; min-width: 16px; text-align: center; }
 
-.footer {
-  font-size: 0.82rem;
-  color: var(--text-muted);
-}
+.footer { font-size: 0.82rem; color: var(--text-muted); }

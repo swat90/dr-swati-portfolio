@@ -2,6 +2,7 @@
   padding: 6rem 2rem;
   position: relative;
   z-index: 1;
+  background: #ffffff;
 }
 
 .container {
@@ -15,7 +16,7 @@
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--accent);
-  margin-bottom: 2rem;
+  margin-bottom: 0.75rem;
 }
 
 .grid {

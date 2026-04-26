@@ -1,0 +1,85 @@
+.section { padding: 6rem 2rem; position: relative; z-index: 1; background: #fff; }
+.container { max-width: 1100px; margin: 0 auto; }
+
+.label { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.75rem; }
+.heading { font-family: 'DM Serif Display', serif; font-size: clamp(2rem, 4vw, 3rem); color: var(--text-primary); margin-bottom: 0.75rem; }
+.sub { font-size: 1rem; color: var(--text-secondary); font-weight: 300; line-height: 1.7; max-width: 640px; margin-bottom: 1.5rem; }
+
+.schLink { margin-bottom: 2rem; }
+.schBtn {
+  display: inline-flex; align-items: center; gap: 0.4rem;
+  border: 1.5px solid var(--border-accent); color: var(--accent);
+  font-size: 0.82rem; font-weight: 600; padding: 0.5rem 1.2rem;
+  border-radius: 8px; transition: background 0.2s;
+}
+.schBtn:hover { background: var(--accent-glow); opacity: 1; }
+
+/* Tabs */
+.tabs { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 2.5rem; }
+.tab {
+  background: #f8f9fc; border: 1.5px solid var(--border);
+  color: var(--text-secondary); padding: 0.45rem 1.2rem;
+  border-radius: 100px; font-size: 0.8rem; font-weight: 500;
+  cursor: pointer; font-family: 'DM Sans', sans-serif; transition: all 0.2s;
+}
+.tab:hover { border-color: var(--accent); color: var(--accent); }
+.tabActive { background: var(--accent); border-color: var(--accent); color: #fff; font-weight: 600; }
+
+/* Featured cards */
+.featuredGrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 1.5rem; }
+
+.featuredCard {
+  background: #fff; border: 1.5px solid var(--border);
+  border-top: 4px solid var(--card-color, var(--accent));
+  border-radius: var(--radius); padding: 1.75rem;
+  transition: box-shadow 0.25s, transform 0.25s;
+}
+.featuredCard:hover { box-shadow: 0 8px 28px rgba(37,99,235,0.1); transform: translateY(-3px); }
+
+.featuredTop { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.4rem; }
+.featuredHighlight { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--card-color, var(--accent)); }
+.featuredYear { font-size: 0.75rem; color: var(--text-muted); font-weight: 600; }
+.featuredType { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.75rem; }
+.featuredTitle { font-family: 'DM Serif Display', serif; font-size: 1.2rem; color: var(--text-primary); line-height: 1.3; margin-bottom: 0.5rem; }
+.featuredAuthors { font-size: 0.78rem; color: var(--text-secondary); margin-bottom: 0.3rem; font-weight: 400; }
+.featuredJournal { font-size: 0.75rem; color: var(--accent); font-weight: 600; margin-bottom: 0.75rem; font-style: italic; }
+.featuredDesc { font-size: 0.84rem; color: var(--text-secondary); line-height: 1.7; font-weight: 300; margin-bottom: 0.75rem; }
+.featuredNote { font-size: 0.75rem; color: var(--accent-warm); font-style: italic; margin-bottom: 0.75rem; }
+.doiBtn {
+  display: inline-flex; align-items: center;
+  background: var(--accent); color: #fff;
+  font-size: 0.8rem; font-weight: 600; padding: 0.5rem 1.2rem;
+  border-radius: 6px; transition: opacity 0.2s;
+}
+.doiBtn:hover { opacity: 0.85; }
+
+/* Paper list */
+.groupLabel {
+  font-size: 0.72rem; font-weight: 700; letter-spacing: 0.14em;
+  text-transform: uppercase; color: var(--text-muted);
+  margin-bottom: 1rem; padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--border);
+}
+
+.paperList { display: flex; flex-direction: column; gap: 0; }
+
+.paperRow {
+  display: flex; gap: 1.5rem; align-items: flex-start;
+  padding: 1rem 0; border-bottom: 1px solid var(--border);
+}
+.paperRow:last-child { border-bottom: none; }
+
+.paperMeta { flex-shrink: 0; width: 42px; }
+.paperYear { font-size: 0.72rem; font-weight: 700; color: var(--accent); }
+
+.paperBody { flex: 1; }
+.paperTitle { font-size: 0.88rem; color: var(--text-primary); font-weight: 500; line-height: 1.45; margin-bottom: 0.25rem; }
+.paperAuthors { font-size: 0.75rem; color: var(--text-secondary); margin-bottom: 0.2rem; font-weight: 300; }
+.paperJournal { font-size: 0.75rem; color: var(--accent); font-style: italic; font-weight: 500; margin-bottom: 0.3rem; }
+.paperLink { font-size: 0.72rem; font-weight: 600; color: var(--accent); }
+.paperLink:hover { opacity: 0.7; }
+
+@media (max-width: 640px) {
+  .featuredGrid { grid-template-columns: 1fr; }
+  .paperRow { gap: 0.75rem; }
+}

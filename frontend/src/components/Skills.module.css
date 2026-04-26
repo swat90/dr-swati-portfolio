@@ -1,29 +1,21 @@
 .section {
   padding: 6rem 2rem;
-  background: linear-gradient(to bottom, transparent, rgba(99,179,237,0.02), transparent);
+  background: #f8f9fc;
   position: relative;
   z-index: 1;
 }
 
-.container {
-  max-width: 1100px;
-  margin: 0 auto;
-}
+.container { max-width: 1100px; margin: 0 auto; }
 
 .label {
-  font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--accent);
-  margin-bottom: 0.75rem;
+  font-size: 0.75rem; font-weight: 600; letter-spacing: 0.2em;
+  text-transform: uppercase; color: var(--accent); margin-bottom: 0.75rem;
 }
 
 .heading {
   font-family: 'DM Serif Display', serif;
   font-size: clamp(2rem, 4vw, 3rem);
-  color: var(--text-primary);
-  margin-bottom: 3rem;
+  color: var(--text-primary); margin-bottom: 3rem;
 }
 
 .grid {
@@ -34,39 +26,36 @@
 }
 
 .group {
-  background: var(--bg-card);
-  border: 1px solid var(--border);
+  background: #ffffff;
+  border: 1.5px solid var(--border);
   border-radius: var(--radius);
   padding: 1.5rem;
-  transition: border-color 0.25s;
+  transition: border-color 0.25s, box-shadow 0.25s;
 }
 
 .group:hover {
-  border-color: var(--border-accent);
+  border-color: var(--accent);
+  box-shadow: 0 4px 16px rgba(37,99,235,0.07);
 }
 
 .category {
-  font-size: 0.78rem;
-  font-weight: 600;
-  letter-spacing: 0.12em;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--accent);
   margin-bottom: 1rem;
 }
 
-.pills {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.4rem;
-}
+.pills { display: flex; flex-wrap: wrap; gap: 0.4rem; }
 
 .pill {
-  background: rgba(240,240,245,0.04);
-  border: 1px solid var(--border);
+  background: var(--accent-glow);
+  border: 1px solid var(--border-accent);
   color: var(--text-secondary);
   padding: 0.28rem 0.7rem;
   border-radius: 100px;
-  font-size: 0.78rem;
+  font-size: 0.76rem;
   font-weight: 400;
 }
 
@@ -75,22 +64,23 @@
   align-items: center;
   gap: 0.6rem;
   flex-wrap: wrap;
-  margin-top: 1rem;
+  margin-top: 0.5rem;
 }
 
 .langLabel {
-  font-size: 0.78rem;
-  font-weight: 600;
+  font-size: 0.75rem;
+  font-weight: 700;
   color: var(--text-muted);
   text-transform: uppercase;
   letter-spacing: 0.1em;
 }
 
 .langPill {
-  background: rgba(246,173,85,0.08);
-  border: 1px solid rgba(246,173,85,0.2);
+  background: rgba(217,119,6,0.08);
+  border: 1px solid rgba(217,119,6,0.2);
   color: var(--accent-warm);
   padding: 0.28rem 0.8rem;
   border-radius: 100px;
-  font-size: 0.78rem;
+  font-size: 0.76rem;
+  font-weight: 500;
 }
