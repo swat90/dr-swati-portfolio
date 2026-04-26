@@ -68,7 +68,7 @@ const items = [
     placeholder: { icon: '🤖', color: '#2563eb', label: 'Add 4 AI Kanko screenshots → kanko-1.png through kanko-4.png' },
     image: null,
     images: [kanko1, kanko2, kanko3, kanko4],       // → [kanko1, kanko2, kanko3, kanko4]
-    tags: ['GCP Cloud Run', 'RAG', 'LLMs', 'Recommendation ML', 'Firestore', 'Cloud Scheduler', 'FastAPI'],
+    tags: ['GCP Cloud Run', 'RAG', 'LLMs', 'Recommendation ML', 'Firestore', 'Cloud Scheduler', 'FastAPI', 'Python'],
     note: 'Production system at Wasimil (2024–2025). Video demo available — click below.',
     videoUrl: 'https://share.zight.com/p9u9DvWp#summary',
     videoLabel: '▶ Watch Full Demo on Zight',
@@ -83,7 +83,7 @@ const items = [
     placeholder: { icon: '💬', color: '#059669', label: 'Add 4 chatbot screenshots → faq-chat-1.png through faq-chat-4.png' },
     image: null,
     images: [faq1, faq2, faq3, faq4],       // → [faq1, faq2, faq3, faq4]
-    tags: ['RAG', 'pgvector', 'FastAPI', 'GCP Cloud Run', 'Multilingual'],
+    tags: ['RAG', 'pgvector', 'FastAPI', 'GCP Cloud Run', 'Multilingual' , 'Python'],
     note: 'Production system at Wasimil (2024–2025).',
     videoUrl: null,
   },
@@ -96,7 +96,7 @@ const items = [
     placeholder: { icon: '🎙️', color: '#d97706', label: 'Screenshot from video demo — add here once captured' },
     image: null,
     images: null,
-    tags: ['Whisper', 'OpenAI GPT', 'GCP Cloud Run', 'Docker', 'Speech-to-Text', 'Japanese NLP'],
+    tags: ['Whisper', 'OpenAI GPT', 'GCP Cloud Run', 'Docker', 'Speech-to-Text', 'Japanese NLP', 'Python'],
     note: 'Production system at Wasimil (2024). Video demo available — click below.',
     videoUrl: 'https://share.zight.com/8LuKdXqK#summary',
     videoLabel: '▶ Watch Demo on Zight',

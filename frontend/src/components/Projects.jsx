@@ -2,42 +2,6 @@ import styles from './Projects.module.css'
 
 const projects = [
   {
-    title: 'Hotel Review Sentiment Dashboard',
-    category: 'NLP · Data Visualization',
-    description:
-      'An end-to-end NLP pipeline that scrapes hotel reviews from Booking.com and Tripadvisor, runs multilingual sentiment analysis (BERT + Gemini), and visualizes insights in an interactive dashboard. Built during my time at Wasimil to help hotel clients understand guest feedback at scale.',
-    highlights: [
-      'Multilingual sentiment classification (English, Japanese, Chinese)',
-      'Topic extraction per review category (cleanliness, service, food, etc.)',
-      'Real-time sync to Firestore via Make.com automation',
-      'Interactive charts: sentiment trends, rating correlation, keyword clouds',
-    ],
-    stack: ['BERT', 'Gemini API', 'Firestore', 'Make.com', 'Python', 'Streamlit'],
-    github: 'https://github.com/swat90',
-    demo: null,
-    badge: 'Industry Project',
-    badgeColor: 'blue',
-    icon: '📊',
-  },
-  {
-    title: 'Hotel FAQ Chatbot (RAG)',
-    category: 'LLM · RAG · NLP',
-    description:
-      'A production-ready multilingual FAQ chatbot for hotel front desks, built on Retrieval-Augmented Generation (RAG). Ingests hotel policy documents, room details, and FAQs into a vector store, enabling natural language queries by staff and guests in English and Japanese.',
-    highlights: [
-      'RAG pipeline with pgvector for semantic document retrieval',
-      'Deployed on GCP Cloud Run with FastAPI backend',
-      'Supports English ↔ Japanese translation on the fly',
-      'Reduced front desk query handling time by ~50%',
-    ],
-    stack: ['RAG', 'pgvector', 'FastAPI', 'GCP Cloud Run', 'LangChain', 'Python'],
-    github: 'https://github.com/swat90',
-    demo: null,
-    badge: 'Production',
-    badgeColor: 'green',
-    icon: '🤖',
-  },
-  {
     title: 'Mental Health Well-being AI (PeacePal)',
     category: 'NLP · Sentiment · LLM',
     description:
@@ -49,8 +13,8 @@ const projects = [
       'Analyzed social media posts across multiple languages',
     ],
     stack: ['BERT', 'XGBoost', 'Mistral-7b', 'RAG', 'Hugging Face', 'Python'],
-    github: 'https://github.com/swat90',
-    demo: 'https://huggingface.co/spaces/Omdena-Mental-Health-Team-2/PeacePal',
+    github: 'https://github.com/swat90/ChatBot',
+    demo: 'https://huggingface.co/spaces/SwatGarg/PeacePal',
     badge: 'Open Source · Omdena',
     badgeColor: 'purple',
     icon: '🧠',
@@ -85,7 +49,7 @@ const projects = [
       'Used by teams in disaster response and urban planning',
     ],
     stack: ['YOLOv8', 'SAM', 'FastSAM', 'OpenCV', 'Python', 'GIS'],
-    github: 'https://dagshub.com/Omdena/HOTOSM',
+    Dagshub: 'https://dagshub.com/Omdena/HOTOSM',
     demo: null,
     badge: 'Open Source · Omdena',
     badgeColor: 'purple',
