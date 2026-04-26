@@ -3,7 +3,7 @@ import styles from './Hero.module.css'
 // ── ADD YOUR PHOTO ────────────────────────────────────────────────────────────
 // 1. Put your photo in src/assets/  (e.g. swati-photo.jpg)
 // 2. Uncomment the import below:
-import profilePhoto from '../assets/swati-photo.jpg'
+import profilePhoto from '../assets/swati-photo.png'
 // 3. Change  PHOTO = null  to  PHOTO = profilePhoto
 // ─────────────────────────────────────────────────────────────────────────────
 const PHOTO = profilePhoto // ← replace with your import once added
