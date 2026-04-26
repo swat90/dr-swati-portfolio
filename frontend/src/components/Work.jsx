@@ -17,6 +17,9 @@ import faq1             from '../assets/showcase/faq-chat-1.png'
 import faq2             from '../assets/showcase/faq-chat-2.png'
 import faq3             from '../assets/showcase/faq-chat-3.png'
 import faq4             from '../assets/showcase/faq-chat-4.png'
+import peace             from '../assets/showcase/peacepal.jpg'
+import hot             from '../assets/showcase/hotsom.png'
+import fin             from '../assets/showcase/finthrive.jpg'
 // ─────────────────────────────────────────────────────────────────────────────
 
 const TABS = [
@@ -174,7 +177,7 @@ const items = [
     subtitle: 'BERT · Mistral-7b · RAG · Hugging Face',
     description: 'AI system analysing global mental health discourse and FOMO on social media. XGBoost and BERT for multi-class sentiment classification, RAG with Mistral-7b for nuanced emotional interpretation. Deployed as an interactive app on Hugging Face Spaces.',
     impact: 'Live on Hugging Face · Open source · Multi-language',
-    image: null,
+    image: peace,
     images: null,
     tags: ['BERT', 'XGBoost', 'Mistral-7b', 'RAG', 'Hugging Face', 'NLP'],
     note: null,
@@ -192,7 +195,7 @@ const items = [
     subtitle: 'CrewAI · Mistral LLM · Multi-Agent · Streamlit',
     description: 'GenZ-focused personal finance advisor powered by CrewAI multi-agent system. Planner, advisor, and educator agents collaborate to provide personalised advice on expense tracking, debt repayment, and financial education through a conversational Streamlit interface.',
     impact: 'Open source · Multi-agent architecture · GenZ focused',
-    image: null,
+    image: fin,
     images: null,
     tags: ['CrewAI', 'Mistral LLM', 'Streamlit', 'Multi-Agent', 'Python'],
     note: null,
@@ -210,7 +213,7 @@ const items = [
     subtitle: 'YOLOv8 · SAM · FastSAM · GIS · 88%+ accuracy',
     description: 'Collaborated with the Humanitarian OpenStreetMap Team to automate mapping updates using computer vision. Implemented and compared YOLO Segmentation, SAM, and FastSAM pipelines for feature extraction from aerial/satellite imagery. Used by teams in disaster response and urban planning.',
     impact: '88%+ accuracy · Disaster response use case · Open source',
-    image: null,
+    image: hot,
     images: null,
     tags: ['YOLOv8', 'SAM', 'FastSAM', 'OpenCV', 'GIS', 'Python'],
     note: null,
