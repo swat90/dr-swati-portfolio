@@ -217,6 +217,7 @@ export default function Publications() {
                     <p className={styles.paperTitle}>{p.title}</p>
                     <p className={styles.paperAuthors}>{p.authors}</p>
                     <p className={styles.paperJournal}>{p.journal}</p>
+                    {p.doi && <a href={p.doi} target="_blank" rel="noreferrer" className={styles.paperLink}>View ↗</a>}
                   </div>
                 </div>
               ))}
@@ -236,6 +237,7 @@ export default function Publications() {
                     <p className={styles.paperTitle}>{p.title}</p>
                     <p className={styles.paperAuthors}>{p.authors}</p>
                     <p className={styles.paperJournal}>{p.venue}</p>
+                    {p.doi && <a href={p.doi} target="_blank" rel="noreferrer" className={styles.paperLink}>View ↗</a>}
                   </div>
                 </div>
               ))}
