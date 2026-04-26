@@ -123,8 +123,8 @@ const journalPapers = [
 
 const conferencePapers = [
   { authors: 'Swati Garg, A. K. Jain', title: 'Does Compound Nucleus remember its Isospin — An Evidence from Fission Widths', venue: 'EPJ Web of Conferences 178, 05008', year: '2018', doi: 'https://doi.org/10.1051/epjconf/201817805008', intl: true },
-  { authors: 'A. K. Jain, Swati Garg', title: 'Isospin Conservation in Neutron Rich Systems of Heavy Nuclei', venue: 'EPJ Web of Conferences 178, 05007', year: '2018', doi: '		https://doi.org/10.1051/epjconf/201817805007', intl: true },
-  { authors: 'Sukhjeet Kaur, Swati Garg', title: 'Isospin Effects on the Transverse Momentum Spectra of Protons and Neutrons', venue: 'Acta Physica Polonica B 45, 463', year: '2014', doi: 'https://inspirehep.net/files/f50f5898a799040380ff7689f5e5a7fc', intl: true },
+  { authors: 'A. K. Jain, Swati Garg', title: 'Isospin Conservation in Neutron Rich Systems of Heavy Nuclei', venue: 'EPJ Web of Conferences 178, 05007', year: '2018', doi: 'https://doi.org/10.1051/epjconf/201817805007', intl: true },
+  { authors: 'Sukhjeet Kaur, Swati Garg', title: 'Isospin Effects on the Transverse Momentum Spectra of Protons and Neutrons', venue: 'Acta Physica Polonica B 45, 463', year: '2014', doi: 'https://doi.org/10.5506/APhysPolB.45.463', intl: true },
   { authors: 'S. Garg', title: 'Role of Isospin in Heavy and Neutron-rich Nuclei', venue: 'DAE Symposium on Nuclear Physics 63, 1238', year: '2018', intl: false },
   { authors: 'S. Garg, B. Maheshwari, D. Choudhury, A. K. Jain', title: 'Isospin Dependence in Fission Fragment Yields', venue: 'DAE Symposium on Nuclear Physics 64, 74', year: '2019', intl: false },
   { authors: 'S. Garg, A. K. Jain', title: 'Purity of Isospin and its importance in n-rich systems', venue: 'DAE Symposium on Nuclear Physics 61, 74', year: '2016', intl: false },
