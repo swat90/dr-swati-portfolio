@@ -5,16 +5,15 @@ const TABS = ['Featured', 'Journal Papers', 'Conference Proceedings']
 
 const featured = [
   {
-    title: 'Machine Learning Application in Atmospheric / Space Physics',
-    authors: 'Swati Garg et al.',
+    title: 'Prediction of thermospheric CO2 emission using Machine Learning Technique',
+    authors: 'Tikemani Bag, Yasunobu Ogawa, V. Sivakumar, Swati Garg',
     journal: 'Advances in Space Research',
     year: '2025',
     type: 'Journal · ML & Physics',
     description: 'Independent research applying machine learning to atmospheric/space physics — bridging the gap between traditional physics modelling and modern AI methods. Published in 2025, this paper demonstrates the cross-disciplinary application of ML techniques to complex physical systems.',
     doi: 'https://www.sciencedirect.com/science/article/abs/pii/S0273117725013547',
-    highlight: 'Latest · ML × Physics · 2025',
+    highlight: 'Latest · ML × Physics · 2026',
     color: '#2563eb',
-    note: 'Add full title and co-authors — update title field above.',
   },
   {
     title: 'Atlas of Nuclear Isomers — Second Edition',
@@ -48,11 +47,11 @@ const journalPapers = [
     national: false,
   },
   {
-    authors: 'A. Dey, D.C. Biswas, A. Chakraborty, S. Mukhopadhyay, Swati Garg, B. Maheshwari, A. K. Jain, W. Urban et al.',
+    authors: 'A. Dey, D.C. Biswas, A. Chakraborty, S. Mukhopadhyay,  A. K. Mondal, L. S. Danu, B. Mukherjee, Swati Garg, B. Maheshwari, A. K. Jain et al.',
     title: 'Measurement of relative isotopic yield distribution of even-even fission fragments from ²³⁵U (nₜₕ, f) following γ-ray spectroscopy',
     journal: 'Physical Review C, 103(4), 044322',
     year: '2021',
-    doi: 'https://www.scopus.com/record/display.uri?eid=2-s2.0-85105524464',
+    doi: 'https://doi.org/10.1103/PhysRevC.103.044322',
     national: false,
   },
   {
@@ -60,7 +59,7 @@ const journalPapers = [
     title: 'Isospin conservation in compound nuclear fusion–fission reactions — empirical evidence',
     journal: 'Eur. Phys. J. Special Topics 229, 2527–2541',
     year: '2020',
-    doi: null,
+    doi: 'https://doi.org/10.1140/epjst/e2020-000040-8',
     national: false,
   },
   {
@@ -68,15 +67,15 @@ const journalPapers = [
     title: 'Role of isospin and its conservation in neutron-rich fission fragments',
     journal: 'Phys. Scr. 93, 124008',
     year: '2018',
-    doi: null,
+    doi: 'https://iopscience.iop.org/article/10.1088/1402-4896/aae729',
     national: false,
   },
   {
-    authors: 'F. G. Kondev, E. A. McCutchan, B. Singh, Swati Garg, R. Shearman et al.',
+    authors: 'F.G. Kondev, E.A. McCutchan, B. Singh, K. Banerjee, S. Bhattacharya, A. Chakraborty, S. Garg, N. Jovancevic, S. Kumar, S.K. Rathi, T. Roy, Jounghwa Lee, R. Shearman',
     title: 'Nuclear Data Sheets for A=217',
     journal: 'Nuclear Data Sheets 147, 382',
     year: '2018',
-    doi: null,
+    doi: 'https://doi.org/10.1016/j.nds.2018.01.002',
     national: false,
   },
   {
@@ -84,7 +83,7 @@ const journalPapers = [
     title: 'Goodness of Isospin in Neutron Rich Systems from the Fission Fragment Distribution',
     journal: 'Phys. Scr. 92, 094001',
     year: '2017',
-    doi: null,
+    doi: 'https://iopscience.iop.org/article/10.1088/1402-4896/aa7f02',
     national: false,
   },
   {
@@ -92,7 +91,7 @@ const journalPapers = [
     title: 'Atlas of Nuclear Isomers',
     journal: 'Nuclear Data Sheets 128, 1',
     year: '2015',
-    doi: null,
+    doi: 'https://doi.org/10.1016/j.nds.2015.08.001',
     national: false,
   },
   {
@@ -100,7 +99,7 @@ const journalPapers = [
     title: 'Effect of Isospin Degree of Freedom on Transverse Momentum Spectra',
     journal: 'International Journal of Modern Physics E 22, 1350078',
     year: '2013',
-    doi: null,
+    doi: 'https://doi.org/10.1142/S021830131350078X',
     national: false,
   },
   // National
@@ -109,7 +108,7 @@ const journalPapers = [
     title: 'Test of Isospin Conservation in Thermal Neutron-induced Fission of ²⁴⁵Cm',
     journal: 'Pramana – J. Phys. 92, 35',
     year: '2019',
-    doi: null,
+    doi: 'https://doi.org/10.1007/s12043-018-1691-1',
     national: true,
   },
   {
@@ -117,15 +116,15 @@ const journalPapers = [
     title: 'Rapid Communication: Δv = 2 seniority changing transitions in yrast 3⁻ states and B(E3) systematics of Sn isotopes',
     journal: 'Pramana – J. Phys. 89, 75',
     year: '2017',
-    doi: null,
+    doi: 'https://doi.org/10.1007/s12043-017-1475-z',
     national: true,
   },
 ]
 
 const conferencePapers = [
-  { authors: 'Swati Garg, A. K. Jain', title: 'Does Compound Nucleus remember its Isospin — An Evidence from Fission Widths', venue: 'EPJ Web of Conferences 178, 05008', year: '2018', intl: true },
-  { authors: 'A. K. Jain, Swati Garg', title: 'Isospin Conservation in Neutron Rich Systems of Heavy Nuclei', venue: 'EPJ Web of Conferences 178, 05007', year: '2018', intl: true },
-  { authors: 'Sukhjeet Kaur, Swati Garg', title: 'Isospin Effects on the Transverse Momentum Spectra of Protons and Neutrons', venue: 'Acta Physica Polonica B 45, 463', year: '2014', intl: true },
+  { authors: 'Swati Garg, A. K. Jain', title: 'Does Compound Nucleus remember its Isospin — An Evidence from Fission Widths', venue: 'EPJ Web of Conferences 178, 05008', year: '2018', doi: 'https://doi.org/10.1051/epjconf/201817805008', intl: true },
+  { authors: 'A. K. Jain, Swati Garg', title: 'Isospin Conservation in Neutron Rich Systems of Heavy Nuclei', venue: 'EPJ Web of Conferences 178, 05007', year: '2018', doi: '		https://doi.org/10.1051/epjconf/201817805007', intl: true },
+  { authors: 'Sukhjeet Kaur, Swati Garg', title: 'Isospin Effects on the Transverse Momentum Spectra of Protons and Neutrons', venue: 'Acta Physica Polonica B 45, 463', year: '2014', doi: 'https://inspirehep.net/files/f50f5898a799040380ff7689f5e5a7fc', intl: true },
   { authors: 'S. Garg', title: 'Role of Isospin in Heavy and Neutron-rich Nuclei', venue: 'DAE Symposium on Nuclear Physics 63, 1238', year: '2018', intl: false },
   { authors: 'S. Garg, B. Maheshwari, D. Choudhury, A. K. Jain', title: 'Isospin Dependence in Fission Fragment Yields', venue: 'DAE Symposium on Nuclear Physics 64, 74', year: '2019', intl: false },
   { authors: 'S. Garg, A. K. Jain', title: 'Purity of Isospin and its importance in n-rich systems', venue: 'DAE Symposium on Nuclear Physics 61, 74', year: '2016', intl: false },

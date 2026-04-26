@@ -2,19 +2,21 @@ import { useState } from 'react'
 import styles from './Work.module.css'
 
 // ─── ADD SCREENSHOTS ──────────────────────────────────────────────────────────
-// import bokunImg      from '../assets/showcase/bokun-dashboard.png'
-// import miyamaImg     from '../assets/showcase/miyama-stats-dashboard.png'
-// import kanko1        from '../assets/showcase/ai-kanko-1.png'
-// import kanko2        from '../assets/showcase/ai-kanko-2.png'
-// import kanko3        from '../assets/showcase/ai-kanko-3.png'
-// import kanko4        from '../assets/showcase/ai-kanko-4.png'
-// import faq1          from '../assets/showcase/faq-1.png'
-// import faq2          from '../assets/showcase/faq-2.png'
-// import faq3          from '../assets/showcase/faq-3.png'
-// import faq4          from '../assets/showcase/faq-4.png'
-// import reservImg     from '../assets/showcase/reservation-automation.png'
-// import kbImg         from '../assets/showcase/kb-automation.png'
-// import sprintImg     from '../assets/showcase/sprint-automation.png'
+import bokunImg from "../assets/showcase/bokun-to-hubspot.png";
+import kbImg from "../assets/showcase/KB_articles.png";
+import sprintImg from "../assets/showcase/sprint_grooming.png";
+
+import bokundashImg     from '../assets/showcase/bokun-dashboard.png'
+import miyamaStatsImg   from '../assets/showcase/stats-dashboard.png'
+import kanko1           from '../assets/showcase/ai-kanko-1.png'
+import kanko2           from '../assets/showcase/ai-kanko-2.png'
+import kanko3           from '../assets/showcase/ai-kanko-3.png'
+import kanko4           from '../assets/showcase/ai-kanko-4.png'
+import kanko5           from '../assets/showcase/ai-kanko-5.png'
+import faq1             from '../assets/showcase/faq-chat-1.png'
+import faq2             from '../assets/showcase/faq-chat-2.png'
+import faq3             from '../assets/showcase/faq-chat-3.png'
+import faq4             from '../assets/showcase/faq-chat-4.png'
 // ─────────────────────────────────────────────────────────────────────────────
 
 const TABS = [
@@ -37,7 +39,7 @@ const items = [
     description: 'Built as sole AI Engineer at Wasimil. Four fully integrated modules:\n\n① Ask Data — Natural language interface to hotel data. Ask questions in plain text, get structured analysis with text insights, interactive plots, and data tables.\n\n② Sentiment & Review Intelligence — Reviews scraped via Make.com, stored in Firestore, surfaced as sentiment trends and topic breakdowns inside the platform.\n\n③ Recommendation Engine — "Which customers should I offer a breakfast add-on?" or "Which nationalities book the sauna most?" ML model trained monthly via GCP Cloud Scheduler, predictions run daily as bookings arrive.\n\n④ Customer Segmentation — Automated segmentation pipeline grouping guests by behaviour and booking patterns for targeted marketing.\n\nIncludes full chat history and a saved chart library.',
     impact: '150+ clients · Daily automated inference · End-to-end MLOps',
     image: null,
-    images: null,       // → [kanko1, kanko2, kanko3, kanko4]
+    images: [kanko1, kanko2, kanko3, kanko4],       // → [kanko1, kanko2, kanko3, kanko4]
     tags: ['GCP Cloud Run', 'RAG', 'LLMs', 'Recommendation ML', 'Firestore', 'Cloud Scheduler', 'FastAPI'],
     note: 'Production system at Wasimil (2024–2025).',
     videoUrl: 'https://share.zight.com/p9u9DvWp#summary',
@@ -55,7 +57,7 @@ const items = [
     description: 'Multilingual RAG chatbot for hotel front desks. Ingests policy documents, room info, dining menus, and FAQs into a pgvector store. Staff and guests ask in English or Japanese and get accurate, grounded answers.\n\nThe collage shows real chat interactions: room upgrade queries, local area recommendations, check-in policy questions, and Japanese-language responses.',
     impact: '~50% reduction in front desk queries · Multilingual · pgvector retrieval',
     image: null,
-    images: null,       // → [faq1, faq2, faq3, faq4]
+    images: [faq1, faq2, faq3, faq4],       // → [faq1, faq2, faq3, faq4]
     tags: ['RAG', 'pgvector', 'FastAPI', 'GCP Cloud Run', 'LangChain', 'Japanese NLP'],
     note: 'Production system at Wasimil (2024–2025).',
     videoUrl: null,
@@ -90,7 +92,7 @@ const items = [
     subtitle: 'Power BI · Miyama, Japan · 10+ tour companies',
     description: 'Interactive Power BI dashboard for Miyama tourism operators. Visualises live Bokun reservation data — booking volumes, revenue by tour type, customer origin countries, seasonal demand, and operator performance. Directly connected to the Make.com reservation automation pipeline below, ensuring always-live data.',
     impact: '10+ Miyama tour companies · Real-time Bokun data · Government project',
-    image: null,        // → bokunImg
+    image: bokundashImg,        // → bokunImg
     images: null,
     tags: ['Power BI', 'Bokun API', 'Tourism Analytics', 'Real-time Data', 'Japan'],
     note: 'Government project owned by Wasimil. Shown with company permission. Data anonymised.',
@@ -106,7 +108,7 @@ const items = [
     subtitle: 'Power BI · Customer satisfaction · Local government',
     description: 'Multi-page Power BI dashboard for Miyama Town local government. Tracks visitor satisfaction across the region — feedback scores, sentiment trends by season, most-praised and most-complained experiences, and geographic breakdown of visitor origins. Used by the town office to improve local tourism services.',
     impact: 'Miyama Town government · Seasonal trend analysis · Policy decision support',
-    image: null,        // → miyamaImg
+    image: miyamaStatsImg,        // → miyamaImg
     images: null,
     tags: ['Power BI', 'Customer Feedback', 'Sentiment Analysis', 'Government', 'Japan'],
     note: 'Government project owned by Wasimil. Shown with company permission. Data anonymised.',
@@ -122,7 +124,7 @@ const items = [
     subtitle: 'Real-time webhooks · 10+ tour companies · LINE notifications',
     description: 'End-to-end automation for Miyama tour operators. Bokun reservation webhooks processed in real time — bookings logged to Google Sheets, synced to HubSpot CRM. Detects new vs. existing customers, creates or updates deals, and triggers email/LINE notifications. Output feeds directly into the Bokun Power BI dashboard above.',
     impact: '~90% manual effort saved · Real-time · 10+ tour operators',
-    image: null,        // → reservImg
+    image: bokunImg,        // → reservImg
     images: null,
     tags: ['Make.com', 'Bokun Webhooks', 'HubSpot CRM', 'Google Sheets', 'LINE Notify'],
     note: 'Government project owned by Wasimil. Shown with company permission.',
@@ -138,7 +140,7 @@ const items = [
     subtitle: 'ClickUp → OpenAI → Notion → Slack',
     description: 'Converts ClickUp tasks and QA discussions into structured knowledge base articles automatically. AI generates, formats, and publishes to Notion, then sends Slack notifications for team review. Eliminated manual formatting and reduced documentation time from hours to minutes.',
     impact: '90% time saved · Zero manual formatting · Improved team alignment',
-    image: null,        // → kbImg
+    image: kbImg,        // → kbImg
     images: null,
     tags: ['Make.com', 'OpenAI', 'Notion API', 'Slack API', 'ClickUp'],
     note: null,
@@ -154,7 +156,7 @@ const items = [
     subtitle: 'ClickUp status triggers · AI evaluation · Auto-feedback',
     description: 'Triggered by ClickUp status changes. When a task enters review, AI evaluates completeness — goal clarity, success criteria, test case coverage. Auto-updates task status (Pass/Fail) and posts actionable feedback in ClickUp chat before QA begins.',
     impact: '70% less communication overhead · 80% fewer regressions',
-    image: null,        // → sprintImg
+    image: sprintImg,        // → sprintImg
     images: null,
     tags: ['Make.com', 'AI Validation', 'ClickUp API', 'QA Automation'],
     note: null,
