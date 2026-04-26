@@ -20,6 +20,7 @@ import faq4             from '../assets/showcase/faq-chat-4.png'
 import peace             from '../assets/showcase/peacepal.jpg'
 import hot             from '../assets/showcase/hotsom.png'
 import fin             from '../assets/showcase/finthrive.jpg'
+import speech             from '../assets/showcase/translate.png'
 // ─────────────────────────────────────────────────────────────────────────────
 
 const TABS = [
@@ -75,7 +76,7 @@ const items = [
     subtitle: 'Whisper · OpenAI GPT · Dockerised Cloud Run',
     description: 'Staff record voice notes in any language. Whisper transcribes with high accuracy, GPT translates to Japanese and formats into structured categories (guest preferences, complaints, special requests, maintenance).\n\nDeployed on GCP Cloud Run via Docker — packaged with Dockerfile, requirements.txt, and Whisper model file. Zero manual setup per hotel property.\n\nReduces manual note-writing by ~50% and eliminates translation errors between non-Japanese-speaking staff and management.',
     impact: '~50% manual effort saved · Dockerised Cloud Run · Any language → Japanese',
-    image: null,
+    image: speech,
     images: null,
     tags: ['Whisper', 'OpenAI GPT', 'GCP Cloud Run', 'Docker', 'FastAPI', 'Japanese NLP'],
     note: 'Production at Wasimil (2024). Video demo available.',
@@ -110,7 +111,7 @@ const items = [
     title: 'Miyama Town Visitor Feedback Dashboard',
     subtitle: 'Power BI · Customer satisfaction · Local government',
     description: 'Multi-page Power BI dashboard for Miyama Town local government. Tracks visitor satisfaction across the region — feedback scores, sentiment trends by season, most-praised and most-complained experiences, and geographic breakdown of visitor origins. Used by the town office to improve local tourism services.',
-    impact: 'Miyama Town government · Seasonal trend analysis · Policy decision support',
+    impact: 'Miyama Town government · Seasonal trend analysis',
     image: miyamaStatsImg,        // → miyamaImg
     images: null,
     tags: ['Power BI', 'Customer Feedback', 'Sentiment Analysis', 'Government', 'Japan'],
