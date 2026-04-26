@@ -8,7 +8,7 @@ const featured = [
     title: 'Prediction of thermospheric CO2 emission using Machine Learning Technique',
     authors: 'Tikemani Bag, Yasunobu Ogawa, V. Sivakumar, Swati Garg',
     journal: 'Advances in Space Research',
-    year: '2025',
+    year: '2026',
     type: 'Journal · ML & Physics',
     description: 'Independent research applying machine learning to atmospheric/space physics — bridging the gap between traditional physics modelling and modern AI methods. Published in 2025, this paper demonstrates the cross-disciplinary application of ML techniques to complex physical systems.',
     doi: 'https://www.sciencedirect.com/science/article/abs/pii/S0273117725013547',
@@ -31,10 +31,10 @@ const featured = [
 
 const journalPapers = [
   {
-    authors: 'Swati Garg et al.',
-    title: 'Machine Learning Application in Atmospheric / Space Physics',
+    authors: 'Tikemani Bag, Yasunobu Ogawa, V. Sivakumar, Swati Garg',
+    title: 'Prediction of thermospheric CO2 emission using Machine Learning Technique',
     journal: 'Advances in Space Research',
-    year: '2025',
+    year: '2026',
     doi: 'https://www.sciencedirect.com/science/article/abs/pii/S0273117725013547',
     national: false,
   },
