@@ -8,7 +8,11 @@ const education = [
     period: 'Jul 2013 – Oct 2019',
     thesis: '"Role of Isospin in Heavy and Neutron-Rich Nuclei"',
     points: [
-      'Published 10+ research papers in international journals and conference proceedings.',
+      'Conducted advanced research on nuclear structure using large-scale scientific datasets and theoretical modeling.',
+      'Developed strong data analysis and problem-solving skills through complex research questions and quantitative studies.', 
+      'Published 10+ research papers in international journals and conference proceedings.', 
+      'Gained experience in scientific writing (LaTeX), data interpretation, and structured documentation of technical work.', 
+      'Built strong communication skills through teaching, conference presentations, and collaboration in international research environments.', 
       'Recipient of MHRD Fellowship (2013–2018).',
       'Vice-President of Physics Association, IIT Roorkee (2014–2015).',
     ],
@@ -21,12 +25,20 @@ const education = [
     grade: '74.15%',
     points: [],
   },
+  {
+    degree: 'B.Sc. in Physics, Chemistry, Maths',
+    institution: 'D.A.V. College',
+    Affilation: 'Panjab University, Chandigarh, India',
+    location: 'Malout, India',
+    period: 'Jul 2007 – Jun 2010',
+    grade: '84.3%',
+    points: [],
+  },
 ]
 
 const achievements = [
   'Grant from National Natural Science Foundation of China (Dec 2019 – Nov 2022)',
   'Cleared GATE 2013 with All India Rank 85',
-  'MHRD Fellowship recipient (Jul 2013 – Jul 2018)',
   'Life member, Indian Physics Association',
 ]
 
