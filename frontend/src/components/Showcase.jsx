@@ -1,5 +1,8 @@
 import { useState } from 'react'
 import styles from './Showcase.module.css'
+import bokunImg from "../assets/showcase/bokun-to-hubspot.png";
+import kbImg from "../assets/showcase/KB_articles.png";
+import sprintImg from "../assets/showcase/sprint_grooming.png";
 
 // ─── HOW TO ADD YOUR SCREENSHOTS ──────────────────────────────────────────────
 // 1. Put images in src/assets/showcase/  (e.g. bokun-dashboard.png)
@@ -47,9 +50,9 @@ const items = [
       'End-to-end automation pipeline built for Miyama tour operators. Incoming Bokun reservation webhooks are processed in real time — new bookings are logged to Google Sheets and synced with HubSpot CRM. The system detects new vs. existing customers, creates or updates deals accordingly, and triggers email/LINE notifications for operational visibility.',
     impact: '~90% manual effort reduction · Real-time processing · 10+ tour companies',
     placeholder: { icon: '⚙️', color: '#2563eb', label: 'Make.com scenario screenshot — export from Make and add here' },
-    image: null, // → replace with: reservationImg
+    image: bokunImg, // → replace with: reservationImg
     tags: ['Make.com', 'Bokun Webhooks', 'HubSpot API', 'Google Sheets', 'LINE Notify'],
-    note: 'Client project (Wasimil / Miyama Town) — shown with permission.',
+    note: 'Client project (Wasimil / Miyama Town)',
   },
   {
     category: 'Make.com Automation',
@@ -58,7 +61,7 @@ const items = [
       'Automated content pipeline that converts ClickUp tasks and internal QA discussions into structured knowledge base articles. AI generates, formats, and publishes documentation directly to Notion, then sends Slack notifications for team review. Eliminates manual formatting and back-and-forth communication entirely.',
     impact: '90% time saved · Fully automated · Improved team alignment',
     placeholder: { icon: '📝', color: '#7c3aed', label: 'Make.com KB scenario screenshot — add here' },
-    image: null, // → replace with: kbImg
+    image: kbImg, // → replace with: kbImg
     tags: ['Make.com', 'OpenAI', 'Notion API', 'Slack API', 'ClickUp'],
   },
   {
@@ -68,7 +71,7 @@ const items = [
       'Intelligent sprint review automation triggered by ClickUp status changes. When a task enters review, AI evaluates its completeness — checking goal clarity, success criteria, and test case coverage. Based on evaluation, it auto-updates task status (Pass/Fail) and posts actionable feedback in ClickUp chat before QA execution begins.',
     impact: '70% less communication overhead · 80% fewer regressions · Cleaner QA handoffs',
     placeholder: { icon: '✅', color: '#059669', label: 'Make.com Sprint QA scenario screenshot — add here' },
-    image: null, // → replace with: sprintImg
+    image: sprintImg, // → replace with: sprintImg
     tags: ['Make.com', 'AI Validation', 'ClickUp API', 'QA Automation'],
   },
 ]
