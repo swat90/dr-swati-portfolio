@@ -49,7 +49,7 @@ const projects = [
       'Used by teams in disaster response and urban planning',
     ],
     stack: ['YOLOv8', 'SAM', 'FastSAM', 'OpenCV', 'Python', 'GIS'],
-    Dagshub: 'https://dagshub.com/Omdena/HOTOSM',
+    github: 'https://dagshub.com/Omdena/HOTOSM',
     demo: null,
     badge: 'Open Source · Omdena',
     badgeColor: 'purple',
