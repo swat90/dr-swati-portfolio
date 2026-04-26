@@ -232,7 +232,7 @@ export default function Showcase() {
         <div className={styles.grid}>
           {filtered.map((item, i) => (
             <div key={i} className={styles.card} onClick={() => setLightbox(item)}>
-              <div className={styles.imageWrap}>
+              <div className={`${styles.imageWrap} ${item.images ? styles.collageWrap : ''}`}>
                 {renderCardMedia(item)}
                 <div className={styles.overlay}>
                   <span className={styles.overlayText}>
