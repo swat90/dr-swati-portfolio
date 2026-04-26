@@ -10,6 +10,7 @@ import kanko1           from '../assets/showcase/ai-kanko-1.png'
 import kanko2           from '../assets/showcase/ai-kanko-2.png'
 import kanko3           from '../assets/showcase/ai-kanko-3.png'
 import kanko4           from '../assets/showcase/ai-kanko-4.png'
+import kanko5           from '../assets/showcase/ai-kanko-5.png'
 import faq1             from '../assets/showcase/faq-chat-1.png'
 import faq2             from '../assets/showcase/faq-chat-2.png'
 import faq3             from '../assets/showcase/faq-chat-3.png'
@@ -67,7 +68,7 @@ const items = [
     impact: '150+ hotel clients · 4 AI modules · GCP production · Daily automated inference',
     placeholder: { icon: '🤖', color: '#2563eb', label: 'Add 4 AI Kanko screenshots → kanko-1.png through kanko-4.png' },
     image: null,
-    images: [kanko1, kanko2, kanko3, kanko4],       // → [kanko1, kanko2, kanko3, kanko4]
+    images: [kanko1, kanko2, kanko3, kanko4, kanko5],       // → [kanko1, kanko2, kanko3, kanko4]
     tags: ['GCP Cloud Run', 'RAG', 'LLMs', 'Recommendation ML', 'Firestore', 'Cloud Scheduler', 'FastAPI', 'Python'],
     note: 'Production system at Wasimil (2024–2025). Video demo available — click below.',
     videoUrl: 'https://share.zight.com/p9u9DvWp#summary',
