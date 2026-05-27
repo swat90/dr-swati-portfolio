@@ -234,7 +234,7 @@ const items = [
     subtitle: 'BERT · Make.com · Apify · Google Sheets · Streamlit',
     description: 'End-to-end NLP pipeline scraping Google Maps reviews for Indian/Pakistani restaurants in Oulu. Make.com orchestrates weekly scraping via Apify → sentiment scored using nlptown/bert-base-multilingual → results stored in Google Sheets → visualised in a live interactive Streamlit dashboard.\n\nFeatures aspect-based scoring across 19 dimensions: food quality, service, spice level, authenticity, cleanliness, vegetarian options, chicken/lamb dishes, and more. Supports English and Finnish reviews. Dashboard shows radar charts, restaurant comparison heatmaps, trends over time, and recommended dish frequency.',
     impact: 'Live Oulu data · 2000+ reviews · 19 aspect dimensions · EN & FI',
-    image: 'review-sentiment',
+    image: 'review-sentiment.jpg',
     images: null,
     tags: ['Make.com', 'Apify', 'BERT', 'NLP', 'Streamlit', 'Google Sheets', 'Python'],
     note: 'Live dashboard — data updates weekly via automated pipeline.',
