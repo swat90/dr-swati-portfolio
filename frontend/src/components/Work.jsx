@@ -226,21 +226,23 @@ const items = [
 
   // ── COMING SOON ───────────────────────────────────────────────────────────
   {
-    tab: 'Coming Soon',
+    tab: 'Production Systems',        // ← move from Coming Soon to Production
     icon: '🍜',
-    badge: 'In Progress',
-    badgeColor: 'warm',
+    badge: 'Live · Streamlit',
+    badgeColor: 'green',              // ← green since it's live
     title: 'Oulu Restaurant Sentiment Dashboard',
-    subtitle: 'Apify · HuggingFace · Google Sheets · Streamlit · Live data',
-    description: 'End-to-end NLP pipeline scraping Google reviews for local Oulu restaurants via Apify. Make.com orchestrates the flow — reviews sent to HuggingFace Inference API (nlptown/bert-base-multilingual) for sentiment scoring, results saved to Google Sheets, and visualised in a live interactive Streamlit dashboard.\n\nWill show: sentiment trends by restaurant, rating correlations, topic breakdown (food, service, atmosphere), and time-series analysis.',
-    impact: 'Live Oulu data · Free-tier stack · Public dashboard',
+    subtitle: 'BERT · Make.com · Apify · Google Sheets · Streamlit',
+    description: 'End-to-end NLP pipeline scraping Google Maps reviews for Indian/Pakistani restaurants in Oulu. Make.com orchestrates weekly scraping via Apify → sentiment scored using nlptown/bert-base-multilingual → results stored in Google Sheets → visualised in a live interactive Streamlit dashboard.\n\nFeatures aspect-based scoring across 19 dimensions: food quality, service, spice level, authenticity, cleanliness, vegetarian options, chicken/lamb dishes, and more. Supports English and Finnish reviews. Dashboard shows radar charts, restaurant comparison heatmaps, trends over time, and recommended dish frequency.',
+    impact: 'Live Oulu data · 2000+ reviews · 19 aspect dimensions · EN & FI',
     image: null,
     images: null,
-    tags: ['Make.com', 'Apify', 'HuggingFace', 'Google Sheets', 'Streamlit', 'BERT', 'NLP'],
-    note: 'Currently building — estimated completion 2–3 weeks.',
+    tags: ['Make.com', 'Apify', 'BERT', 'NLP', 'Streamlit', 'Google Sheets', 'Python'],
+    note: 'Live dashboard — data updates weekly via automated pipeline.',
     videoUrl: null,
-    comingSoon: true,
-    placeholder: { icon: '🍜', color: '#2563eb', label: 'Coming soon' },
+    demo: 'https://oulu-indian-restaurant-sentiment-profile.streamlit.app',
+    demoLabel: 'Open Live Dashboard ↗',
+    comingSoon: false,
+    placeholder: { icon: '🍜', color: '#2563eb', label: '' },
   },
   {
     tab: 'Coming Soon',
