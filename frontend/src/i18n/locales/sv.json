@@ -1,0 +1,78 @@
+{
+  "nav": {
+    "about": "Om mig",
+    "experience": "Erfarenhet",
+    "skills": "Kompetens",
+    "work": "Arbete",
+    "publications": "Publikationer",
+    "education": "Utbildning",
+    "contact": "Kontakt"
+  },
+  "hero": {
+    "eyebrow": "Datavetare · AI-ingenjör · NLP-specialist",
+    "tagline": "Bygger intelligenta system i skärningspunkten mellan <em>vetenskap</em> och <em>maskininlärning</em> — från kärnfysikforskning till produktions-AI för 150+ företag.",
+    "location": "Uleåborg, Finland",
+    "open_to": "Öppen för distans- och lokala möjligheter",
+    "btn_experience": "Se erfarenhet",
+    "btn_work": "Se mina arbeten",
+    "btn_contact": "Ta kontakt",
+    "stat_years": "År inom AI & forskning",
+    "stat_clients": "Företagskunder",
+    "stat_papers": "Publicerade artiklar"
+  },
+  "about": {
+    "label": "Om mig",
+    "heading": "Från kärnfysik\ntill AI-ingenjörskonst",
+    "p1": "Filosofie doktor i fysik med 3 års postdoktoral forskningserfarenhet och 2+ år som AI-ingenjör inom industrin. Bygger och driftsätter maskininlärningslösningar — NLP, LLM-baserade applikationer och datorseende — med starka Python-kunskaper.",
+    "p2": "Jag har utvecklat molnbaserade system på Google Cloud, arbetat med verkliga data inom hälso- och sjukvård, besöksnäring och utbildning och trivs i tvärfunktionella team.",
+    "tags": ["NLP & LLM", "Datorseende", "RAG-system", "Moln (GCP)", "Statistisk modellering", "Multi-agent AI"]
+  },
+  "experience": {
+    "label": "Erfarenhet",
+    "heading": "Karriärtidslinje"
+  },
+  "skills": {
+    "label": "Kompetens",
+    "heading": "Teknisk expertis",
+    "languages_label": "Språk"
+  },
+  "work": {
+    "label": "Arbete",
+    "heading": "Allt jag har byggt",
+    "sub": "Produktions-AI-system, kundanpassade dashboards, automatiseringspipelines, öppen källkod och kommande projekt.",
+    "tabs": {
+      "all": "Alla",
+      "production": "Produktionssystem",
+      "dashboards": "Dashboards & automatisering",
+      "opensource": "Öppen källkod",
+      "coming": "🔨 Kommer snart"
+    },
+    "view_details": "Se detaljer",
+    "watch_demo": "▶ Se demo",
+    "coming_soon_note": "Under utveckling"
+  },
+  "publications": {
+    "label": "Publikationer",
+    "heading": "Forskning & akademiskt arbete",
+    "sub": "15+ refereegranskade artiklar inom kärnfysik, datavetenskap och maskininlärning.",
+    "scholar_btn": "Se Google Scholar-profil ↗",
+    "tabs": {
+      "featured": "Utvalda",
+      "journals": "Tidskriftsartiklar",
+      "conferences": "Konferensartiklar"
+    },
+    "view_paper": "Se artikel ↗",
+    "intl": "Internationella",
+    "national": "Nationella"
+  },
+  "education": {
+    "label": "Utbildning & meriter",
+    "heading": "Akademisk bakgrund",
+    "achievements_title": "Meriter & medlemskap"
+  },
+  "contact": {
+    "label": "Kontakt",
+    "heading": "Låt oss ta kontakt",
+    "sub": "Öppen för AI/ML-ingenjörsroller, forskningssamarbeten och konsultuppdrag."
+  }
+}

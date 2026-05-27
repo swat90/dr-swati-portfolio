@@ -1,0 +1,78 @@
+{
+  "nav": {
+    "about": "About",
+    "experience": "Experience",
+    "skills": "Skills",
+    "work": "Work",
+    "publications": "Publications",
+    "education": "Education",
+    "contact": "Contact"
+  },
+  "hero": {
+    "eyebrow": "Data Scientist · AI Engineer · NLP Specialist",
+    "tagline": "Building intelligent systems at the intersection of <em>science</em> and <em>machine learning</em> — from nuclear physics research to production AI for 150+ businesses.",
+    "location": "Oulu, Finland",
+    "open_to": "Open to remote & relocation",
+    "btn_experience": "View Experience",
+    "btn_work": "See My Work",
+    "btn_contact": "Get in Touch",
+    "stat_years": "Years in AI & Research",
+    "stat_clients": "Business Clients",
+    "stat_papers": "Published Papers"
+  },
+  "about": {
+    "label": "About",
+    "heading": "From Nuclear Physics\nto AI Engineering",
+    "p1": "Ph.D. in Physics with 3 years of postdoctoral research experience and 2+ years working as an AI Engineer in industry. I build and deploy machine learning solutions — NLP, LLM-based applications, and computer vision — with strong Python skills.",
+    "p2": "I've developed cloud-based systems on Google Cloud, worked with real-world data across healthcare, hospitality, and education sectors and thrive in cross-functional teams.",
+    "tags": ["NLP & LLMs", "Computer Vision", "RAG Systems", "Cloud (GCP)", "Statistical Modeling", "Multi-Agent AI"]
+  },
+  "experience": {
+    "label": "Experience",
+    "heading": "Career Timeline"
+  },
+  "skills": {
+    "label": "Skills",
+    "heading": "Technical Expertise",
+    "languages_label": "Languages"
+  },
+  "work": {
+    "label": "Work",
+    "heading": "Everything I've Built",
+    "sub": "Production AI systems, client dashboards, automation pipelines, open-source projects, and what's coming next.",
+    "tabs": {
+      "all": "All",
+      "production": "Production Systems",
+      "dashboards": "Dashboards & Automation",
+      "opensource": "Open Source",
+      "coming": "🔨 Coming Soon"
+    },
+    "view_details": "View Details",
+    "watch_demo": "▶ Watch Demo",
+    "coming_soon_note": "Currently building"
+  },
+  "publications": {
+    "label": "Publications",
+    "heading": "Research & Academic Work",
+    "sub": "15+ peer-reviewed papers across nuclear physics, data science, and machine learning.",
+    "scholar_btn": "View Google Scholar Profile ↗",
+    "tabs": {
+      "featured": "Featured",
+      "journals": "Journal Papers",
+      "conferences": "Conference Proceedings"
+    },
+    "view_paper": "View Paper ↗",
+    "intl": "International",
+    "national": "National"
+  },
+  "education": {
+    "label": "Education & Achievements",
+    "heading": "Academic Background",
+    "achievements_title": "Achievements & Affiliations"
+  },
+  "contact": {
+    "label": "Contact",
+    "heading": "Let's Connect",
+    "sub": "Open to AI/ML engineering roles, research collaborations, and consulting opportunities."
+  }
+}

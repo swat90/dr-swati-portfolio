@@ -1,17 +1,10 @@
 import { useState, useEffect } from 'react'
+import { useTranslation } from 'react-i18next'
+import LanguageSwitcher from './LanguageSwitcher'
 import styles from './Nav.module.css'
 
-const links = [
-  { label: 'About',        href: '#about' },
-  { label: 'Experience',   href: '#experience' },
-  { label: 'Skills',       href: '#skills' },
-  { label: 'Work',         href: '#work' },
-  { label: 'Publications', href: '#publications' },
-  { label: 'Education',    href: '#education' },
-  { label: 'Contact',      href: '#contact' },
-]
-
 export default function Nav() {
+  const { t } = useTranslation()
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
 
@@ -20,6 +13,16 @@ export default function Nav() {
     window.addEventListener('scroll', handler)
     return () => window.removeEventListener('scroll', handler)
   }, [])
+
+  const links = [
+    { key: 'about',        href: '#about' },
+    { key: 'experience',   href: '#experience' },
+    { key: 'skills',       href: '#skills' },
+    { key: 'work',         href: '#work' },
+    { key: 'publications', href: '#publications' },
+    { key: 'education',    href: '#education' },
+    { key: 'contact',      href: '#contact' },
+  ]
 
   const close = () => setMenuOpen(false)
 
@@ -30,11 +33,16 @@ export default function Nav() {
       {/* Desktop links */}
       <ul className={styles.links}>
         {links.map(l => (
-          <li key={l.label}>
-            <a href={l.href}>{l.label}</a>
+          <li key={l.key}>
+            <a href={l.href}>{t(`nav.${l.key}`)}</a>
           </li>
         ))}
       </ul>
+
+      {/* Language switcher — desktop */}
+      <div className={styles.langDesktop}>
+        <LanguageSwitcher />
+      </div>
 
       {/* Mobile hamburger */}
       <button
@@ -50,9 +58,17 @@ export default function Nav() {
       {/* Mobile menu */}
       {menuOpen && (
         <div className={styles.mobileMenu}>
+          <div className={styles.mobileLang}>
+            <LanguageSwitcher />
+          </div>
           {links.map(l => (
-            <a key={l.label} href={l.href} className={styles.mobileLink} onClick={close}>
-              {l.label}
+            <a
+              key={l.key}
+              href={l.href}
+              className={styles.mobileLink}
+              onClick={close}
+            >
+              {t(`nav.${l.key}`)}
             </a>
           ))}
         </div>

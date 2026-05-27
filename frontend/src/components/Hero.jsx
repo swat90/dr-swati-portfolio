@@ -1,14 +1,14 @@
+import { useTranslation } from 'react-i18next'
 import styles from './Hero.module.css'
 
-// ── ADD YOUR PHOTO ────────────────────────────────────────────────────────────
-// 1. Put your photo in src/assets/  (e.g. swati-photo.jpg)
-// 2. Uncomment the import below:
-import profilePhoto from '../assets/swati-photo.png'
-// 3. Change  PHOTO = null  to  PHOTO = profilePhoto
-// ─────────────────────────────────────────────────────────────────────────────
-const PHOTO = profilePhoto // ← replace with your import once added
+// ── ADD YOUR PHOTO ─────────────────────────────────────────────────────────
+// import profilePhoto from '../assets/swati-photo.jpg'
+// const PHOTO = profilePhoto
+const PHOTO = null
 
 export default function Hero() {
+  const { t } = useTranslation()
+
   return (
     <section className={styles.hero}>
       <div className={styles.glow} />
@@ -26,23 +26,31 @@ export default function Hero() {
           <div className={styles.photoBadge}>Ph.D. · AI Engineer</div>
         </div>
 
-        <p className={styles.eyebrow}>Data Scientist · AI Engineer · NLP Specialist</p>
+        <p className={styles.eyebrow}>{t('hero.eyebrow')}</p>
         <h1 className={styles.name}>Dr. Swati Garg</h1>
-        <p className={styles.tagline}>
-          Building intelligent systems at the intersection of{' '}
-          <em>science</em> and <em>machine learning</em> —
-          from nuclear physics research to production AI for 150+ businesses.
-        </p>
+
+        {/* tagline uses dangerouslySetInnerHTML for the <em> tags */}
+        <p
+          className={styles.tagline}
+          dangerouslySetInnerHTML={{ __html: t('hero.tagline') }}
+        />
+
         <div className={styles.location}>
-          <span>📍 Oulu, Finland</span>
+          <span>📍 {t('hero.location')}</span>
           <span className={styles.sep}>·</span>
-          <span>Open to remote &amp; relocation</span>
+          <span>{t('hero.open_to')}</span>
         </div>
 
         <div className={styles.cta}>
-          <a href="#experience" className={styles.btnPrimary}>View Experience</a>
-          <a href="#showcase" className={styles.btnSecondary}>See My Work</a>
-          <a href="#contact" className={styles.btnGhost}>Get in Touch</a>
+          <a href="#experience" className={styles.btnPrimary}>
+            {t('hero.btn_experience')}
+          </a>
+          <a href="#work" className={styles.btnSecondary}>
+            {t('hero.btn_work')}
+          </a>
+          <a href="#contact" className={styles.btnGhost}>
+            {t('hero.btn_contact')}
+          </a>
         </div>
 
         <div className={styles.social}>
@@ -53,21 +61,21 @@ export default function Hero() {
           <a href="https://scholar.google.com/citations?user=xgJjVMYAAAAJ&hl=en" target="_blank" rel="noreferrer">Google Scholar</a>
         </div>
 
-        {/* Quick stats */}
+        {/* Stats bar */}
         <div className={styles.stats}>
           <div className={styles.stat}>
             <span className={styles.statNum}>5+</span>
-            <span className={styles.statLabel}>Years in AI & Research</span>
+            <span className={styles.statLabel}>{t('hero.stat_years')}</span>
           </div>
           <div className={styles.statDivider} />
           <div className={styles.stat}>
             <span className={styles.statNum}>150+</span>
-            <span className={styles.statLabel}>Business Clients Served</span>
+            <span className={styles.statLabel}>{t('hero.stat_clients')}</span>
           </div>
           <div className={styles.statDivider} />
           <div className={styles.stat}>
             <span className={styles.statNum}>10+</span>
-            <span className={styles.statLabel}>Published Papers</span>
+            <span className={styles.statLabel}>{t('hero.stat_papers')}</span>
           </div>
         </div>
       </div>

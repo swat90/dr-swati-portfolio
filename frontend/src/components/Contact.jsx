@@ -1,14 +1,15 @@
+import { useTranslation } from 'react-i18next'
 import styles from './Contact.module.css'
 
 export default function Contact() {
+  const { t } = useTranslation()
+
   return (
     <section id="contact" className={styles.section}>
       <div className={styles.container}>
-        <p className={styles.label}>Contact</p>
-        <h2 className={styles.heading}>Let's Connect</h2>
-        <p className={styles.sub}>
-          Open to AI/ML engineering roles, research collaborations, and consulting opportunities.
-        </p>
+        <p className={styles.label}>{t('contact.label')}</p>
+        <h2 className={styles.heading}>{t('contact.heading')}</h2>
+        <p className={styles.sub}>{t('contact.sub')}</p>
 
         <div className={styles.links}>
           <a href="mailto:swatnucl.garg@gmail.com" className={styles.link}>
@@ -34,7 +35,7 @@ export default function Contact() {
         </div>
 
         <p className={styles.footer}>
-          📍 Oulu, Finland &nbsp;·&nbsp; Available for remote & on-site opportunities
+          📍 Oulu, Finland
         </p>
       </div>
     </section>

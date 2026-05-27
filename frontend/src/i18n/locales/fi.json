@@ -1,0 +1,78 @@
+{
+  "nav": {
+    "about": "Tietoa",
+    "experience": "Kokemus",
+    "skills": "Taidot",
+    "work": "Työ",
+    "publications": "Julkaisut",
+    "education": "Koulutus",
+    "contact": "Yhteystiedot"
+  },
+  "hero": {
+    "eyebrow": "Data-tieteilijä · Tekoälyteknikko · NLP-asiantuntija",
+    "tagline": "Rakennan älykkäitä järjestelmiä <em>tieteen</em> ja <em>koneoppimisen</em> risteyksessä — ydinfysiikan tutkimuksesta tuotantotekoälyyn 150+ yritykselle.",
+    "location": "Oulu, Suomi",
+    "open_to": "Avoin etä- ja paikallisiin mahdollisuuksiin",
+    "btn_experience": "Katso kokemus",
+    "btn_work": "Katso työnäytteet",
+    "btn_contact": "Ota yhteyttä",
+    "stat_years": "Vuotta tekoälyssä & tutkimuksessa",
+    "stat_clients": "Yritysasiakasta",
+    "stat_papers": "Julkaistua artikkelia"
+  },
+  "about": {
+    "label": "Tietoa",
+    "heading": "Ydinfysiikasta\ntekoälyinsinöörityöhön",
+    "p1": "Fysiikan tohtori, jolla on 3 vuotta postdoc-tutkimuskokemusta ja yli 2 vuotta tekoälyinsinöörin työtä teollisuudessa. Rakennan ja otan käyttöön koneoppimisratkaisuja — NLP, LLM-pohjaiset sovellukset ja konenäkö — vahvalla Python-osaamisella ja tiedemiehen tarkkuudella.",
+    "p2": "Olen kehittänyt pilvipalvelujärjestelmiä Google Cloudissa, työskennellyt reaalimaailman datan parissa terveydenhuollon, majoitusalan ja koulutussektorin projekteissa ja viihdyn moniammatillisissa tiimeissä.",
+    "tags": ["NLP & LLM", "Konenäkö", "RAG-järjestelmät", "Pilvi (GCP)", "Tilastollinen mallinnus", "Moniagenttitekoäly"]
+  },
+  "experience": {
+    "label": "Kokemus",
+    "heading": "Uraaikajana"
+  },
+  "skills": {
+    "label": "Taidot",
+    "heading": "Tekninen osaaminen",
+    "languages_label": "Kielet"
+  },
+  "work": {
+    "label": "Työ",
+    "heading": "Kaikki mitä olen rakentanut",
+    "sub": "Tuotantotekoälyjärjestelmät, asiakaskohtaiset koontinäytöt, automaatioputket, avoimen lähdekoodin projektit ja mitä on tulossa.",
+    "tabs": {
+      "all": "Kaikki",
+      "production": "Tuotantojärjestelmät",
+      "dashboards": "Koontinäytöt & automaatio",
+      "opensource": "Avoin lähdekoodi",
+      "coming": "🔨 Tulossa"
+    },
+    "view_details": "Katso tiedot",
+    "watch_demo": "▶ Katso demo",
+    "coming_soon_note": "Rakenteilla"
+  },
+  "publications": {
+    "label": "Julkaisut",
+    "heading": "Tutkimus & akateeminen työ",
+    "sub": "15+ vertaisarvioitua artikkelia ydinfysiikasta, tietojenkäsittelytieteestä ja koneoppimisesta.",
+    "scholar_btn": "Katso Google Scholar -profiili ↗",
+    "tabs": {
+      "featured": "Esitellyt",
+      "journals": "Tieteelliset lehdet",
+      "conferences": "Konferenssijulkaisut"
+    },
+    "view_paper": "Katso artikkeli ↗",
+    "intl": "Kansainväliset",
+    "national": "Kansalliset"
+  },
+  "education": {
+    "label": "Koulutus & saavutukset",
+    "heading": "Akateeminen tausta",
+    "achievements_title": "Saavutukset & jäsenyydet"
+  },
+  "contact": {
+    "label": "Yhteystiedot",
+    "heading": "Otetaan yhteyttä",
+    "sub": "Avoin tekoäly/ML-insinöörirooleihin, tutkimusyhteistyöhön ja konsultointiin."
+  }
+}

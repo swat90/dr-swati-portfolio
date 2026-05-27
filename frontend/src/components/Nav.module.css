@@ -5,8 +5,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.1rem 4rem;
-  transition: background 0.3s, backdrop-filter 0.3s, border-bottom 0.3s, box-shadow 0.3s;
+  padding: 1.1rem 3rem;
+  transition: background 0.3s, backdrop-filter 0.3s,
+              border-bottom 0.3s, box-shadow 0.3s;
 }
 
 .nav.scrolled {
@@ -18,9 +19,8 @@
 
 .logo {
   font-family: 'DM Serif Display', serif;
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   color: var(--text-primary);
-  letter-spacing: 0.01em;
   text-decoration: none;
   flex-shrink: 0;
 }
@@ -29,12 +29,12 @@
 .links {
   list-style: none;
   display: flex;
-  gap: 2rem;
+  gap: 1.75rem;
   flex-wrap: nowrap;
 }
 
 .links a {
-  font-size: 0.76rem;
+  font-size: 0.74rem;
   font-weight: 500;
   color: var(--text-secondary);
   letter-spacing: 0.07em;
@@ -47,6 +47,12 @@
 .links a:hover {
   color: var(--accent);
   opacity: 1;
+}
+
+/* Language switcher — desktop */
+.langDesktop {
+  flex-shrink: 0;
+  margin-left: 1rem;
 }
 
 /* Hamburger */
@@ -95,6 +101,12 @@
   to   { opacity: 1; transform: translateY(0); }
 }
 
+.mobileLang {
+  padding-bottom: 1rem;
+  margin-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
 .mobileLink {
   font-size: 1rem;
   font-weight: 500;
@@ -112,5 +124,6 @@
 @media (max-width: 900px) {
   .nav { padding: 1rem 1.5rem; }
   .links { display: none; }
+  .langDesktop { display: none; }
   .hamburger { display: flex; }
 }

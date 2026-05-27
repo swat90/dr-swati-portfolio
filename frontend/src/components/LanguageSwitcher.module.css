@@ -1,0 +1,41 @@
+.switcher {
+  display: flex;
+  align-items: center;
+  gap: 0.15rem;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 0.15rem;
+}
+
+.btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  padding: 0.2rem 0.3rem;
+  border-radius: 4px;
+  transition: color 0.2s, background 0.2s;
+}
+
+.btn:hover {
+  color: var(--accent);
+}
+
+.active {
+  color: var(--accent);
+  font-weight: 700;
+  background: var(--accent-glow);
+}
+
+.sep {
+  font-size: 0.65rem;
+  color: var(--border);
+  user-select: none;
+}
