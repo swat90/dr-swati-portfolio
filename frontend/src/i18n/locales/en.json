@@ -22,9 +22,9 @@
   },
   "about": {
     "label": "About",
-    "heading": "From Nuclear Physics\nto AI Engineering",
-    "p1": "Ph.D. in Physics with 3 years of postdoctoral research experience and 2+ years working as an AI Engineer in industry. I build and deploy machine learning solutions — NLP, LLM-based applications, and computer vision — with strong Python skills.",
-    "p2": "I've developed cloud-based systems on Google Cloud, worked with real-world data across healthcare, hospitality, and education sectors and thrive in cross-functional teams.",
+    "heading": "Research Depth\nMeets Production AI",
+    "p1": "A decade of scientific research trained me to tackle ambiguous problems, think in first principles, and validate rigorously — skills that translate directly into building reliable AI systems. Now I apply that mindset to production ML: LLM applications, RAG pipelines, computer vision, and cloud deployments.",
+    "p2": "At Wasimil I was the sole AI engineer — owning the full stack from architecture through deployment for 150+ hotel clients. That experience of building independently under real constraints is something no course can replicate.",
     "tags": ["NLP & LLMs", "Computer Vision", "RAG Systems", "Cloud (GCP)", "Statistical Modeling", "Multi-Agent AI"]
   },
   "experience": {

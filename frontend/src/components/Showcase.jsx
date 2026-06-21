@@ -15,6 +15,7 @@ import faq1             from '../assets/showcase/faq-chat-1.png'
 import faq2             from '../assets/showcase/faq-chat-2.png'
 import faq3             from '../assets/showcase/faq-chat-3.png'
 import faq4             from '../assets/showcase/faq-chat-4.png'
+import senti             from '../assets/showcase/review-sentiment.jpg'
 
 // ─── HOW TO ADD YOUR SCREENSHOTS ──────────────────────────────────────────────
 // 1. Put images in src/assets/showcase/  (e.g. bokun-dashboard.png)

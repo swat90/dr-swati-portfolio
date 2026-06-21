@@ -22,9 +22,9 @@
   },
   "about": {
     "label": "Om mig",
-    "heading": "Från kärnfysik\ntill AI-ingenjörskonst",
-    "p1": "Filosofie doktor i fysik med 3 års postdoktoral forskningserfarenhet och 2+ år som AI-ingenjör inom industrin. Bygger och driftsätter maskininlärningslösningar — NLP, LLM-baserade applikationer och datorseende — med starka Python-kunskaper.",
-    "p2": "Jag har utvecklat molnbaserade system på Google Cloud, arbetat med verkliga data inom hälso- och sjukvård, besöksnäring och utbildning och trivs i tvärfunktionella team.",
+    "heading": "Forskningsdjup\nmöter produktions-AI",
+    "p1": "Ett decennium av vetenskaplig forskning lärde mig att ta sig an oklara problem med grundprinciper och validera rigoröst — färdigheter som direkt överförs till att bygga tillförlitliga AI-system. Nu tillämpar jag det tänkesättet på produktions-ML: LLM-applikationer, RAG-pipelines, datorseende och molndriftsättning.",
+    "p2": "På Wasimil var jag ensam AI-ingenjör — ansvarade för hela stacken från arkitektur till driftsättning för 150+ hotellkunder. Erfarenheten av att bygga självständigt under verkliga begränsningar är något inget kursutbud kan ersätta.",
     "tags": ["NLP & LLM", "Datorseende", "RAG-system", "Moln (GCP)", "Statistisk modellering", "Multi-agent AI"]
   },
   "experience": {

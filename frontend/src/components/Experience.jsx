@@ -1,151 +1,241 @@
+import { useRef, useState, useEffect } from 'react'
+import { useTranslation } from 'react-i18next'
 import styles from './Experience.module.css'
 
-const experiences = [
+function useInView(threshold = 0.1) {
+  const ref = useRef(null)
+  const [inView, setInView] = useState(false)
+  useEffect(() => {
+    const obs = new IntersectionObserver(
+      ([e]) => { if (e.isIntersecting) setInView(true) },
+      { threshold }
+    )
+    if (ref.current) obs.observe(ref.current)
+    return () => obs.disconnect()
+  }, [threshold])
+  return { ref, inView }
+}
+
+// ── Experience data — updated from CV Apr 2026 ────────────────────────────────
+const EXPERIENCES = [
   {
-    role: 'AI Engineer',
-    company: 'Wasimil',
+    role:     'AI Engineer',
+    company:  'Wasimil',
     location: 'Kyoto, Japan · Remote',
-    period: 'Nov 2024 – Dec 2025',
-    type: 'Full-time',
-    highlights: [
-      'Sole AI Engineer in a B2B SaaS startup serving 150+ hotel clients across Japan.',
-      'Built AI Kanko — a multi-module platform combining LLM analytics, RAG, and ML pipelines for customer segmentation and revenue optimization.',
-      'Developed speech-to-text + multilingual translation system for staff notes, reducing manual workload by ~50%.',
-      'Led RAG-based FAQ chatbot development, cutting front desk query handling time by ~50%.',
-      'Delivered OCR pipelines (Google Vision + PaddleOCR) for passport/ID extraction, reducing check-in time by ~70%.',
-      'Automated workflows via Make.com — review scraping, sentiment analysis, document generation — cutting manual effort by ~70%.',
+    period:   'Nov 2024 – Jan 2026',
+    type:     'industry',
+    badge:    '🏢 Full-time',
+    color:    '#2563eb',
+    summary:  'Sole and first AI Engineer in a B2B SaaS startup. Built production AI systems for 150+ hotel clients across Japan — from architecture through deployment and monitoring.',
+    bullets: [
+      'Designed and deployed end-to-end AI systems on Google Cloud (Cloud Run, Vertex AI, Scheduler) including data pipelines, model development, API integration, and production inference workflows.',
+      'Built AI Kanko — a multi-module platform combining LLM analytics, RAG, and ML pipelines for customer segmentation, recommendation, and revenue optimization.',
+      'Developed speech-to-text + multilingual translation for Japanese staff notes — real-time transcription cutting manual workload by ~50%.',
+      'Led development of a RAG-based FAQ chatbot giving staff natural language access to hotel policies, reducing front desk query handling by ~50%.',
+      'Delivered OCR pipelines for passport/ID extraction using Google Vision — 90% accuracy, cutting guest check-in time by ~80%.',
+      'Automated workflows via Make.com (review scraping, sentiment analysis, document generation, QA validation) — reducing manual effort by up to ~75%.',
     ],
-    stack: ['GCP', 'RAG', 'LLMs', 'PaddleOCR', 'Make.com', 'FastAPI', 'Firestore'],
+    tags: ['GCP', 'LangChain', 'RAG', 'OCR', 'Make.com', 'LLM', 'PostgreSQL'],
   },
   {
-    role: 'Data Scientist',
-    company: 'QBS Learning',
+    role:     'Data Scientist',
+    company:  'QBS Learning',
     location: 'Delhi, India · Remote',
-    period: 'Aug 2024 – Nov 2024',
-    type: 'Contract',
-    highlights: [
-      'Developed AI-powered textbooks for K–8 students for UAE clients.',
-      'Used LLMs with prompt engineering to streamline lesson structures and ensure content originality.',
-      'Achieved ~70% reduction in SME time needed to develop curriculum-aligned lessons.',
+    period:   'Aug 2024 – Nov 2024',
+    type:     'industry',
+    badge:    '🏢 Contract',
+    color:    '#7c3aed',
+    summary:  'Built LLM-powered content pipeline for K–8 textbook development for UAE clients.',
+    bullets: [
+      'Designed a prompt-based workflow converting SME outlines into grade-appropriate lesson content and exercises, refined for originality before SME review.',
+      'Reduced textbook authoring time by ~70%, significantly accelerating the content creation pipeline.',
     ],
-    stack: ['LLMs', 'Prompt Engineering', 'Python'],
+    tags: ['LLM', 'Prompt Engineering', 'Content AI'],
   },
   {
-    role: 'ML Engineer',
-    company: 'Optimum.ai',
+    role:     'ML Engineer',
+    company:  'Optimum.ai',
     location: 'Remote · Freelance',
-    period: 'Apr 2024 – Aug 2024',
-    type: 'Freelance',
-    highlights: [
-      'Collaborated with an international team of 25+ members, taking on leadership responsibilities.',
-      'Taught a deep learning and AI crash course covering transformers, LSTM, and neural networks.',
-      'Built FinThrive — an AI financial planner for GenZ using CrewAI + Mistral LLM in a multi-agent system.',
+    period:   'Apr 2024 – Aug 2024',
+    type:     'freelance',
+    badge:    '💼 Freelance',
+    color:    '#059669',
+    summary:  'Led a sub-team of 5, taught a deep learning crash course, and built a multi-agent financial planner.',
+    bullets: [
+      'Led a sub-team of 5 members and taught a deep learning & AI crash course covering transformers, LSTMs, neural networks, and practical applications.',
+      'Built FinThrive — an AI financial planner for GenZ using CrewAI + Mistral LLM in a multi-agent system on Streamlit, covering expense tracking, forecasting, and debt repayment optimization.',
     ],
-    stack: ['CrewAI', 'Mistral LLM', 'Streamlit', 'Python'],
+    tags: ['CrewAI', 'Mistral', 'Multi-Agent', 'Streamlit'],
     link: 'https://github.com/OptimumAI-Community/AI-Financial-Planner',
   },
   {
-    role: 'ML Engineer',
-    company: 'Omdena',
+    role:     'ML Engineer',
+    company:  'Omdena',
     location: 'Remote · Freelance',
-    period: 'Sep 2023 – Jul 2024',
-    type: 'Freelance',
-    highlights: [
-      'Contributed to 4 projects with teams of 100+ international members.',
-      'Led computer vision work (SAM, FastSAM, YOLO) for the HOT Team mapping initiative — 88%+ accuracy for aerial imagery feature extraction.',
-      'Built sentiment analysis + RAG pipeline (Mistral-7b) for global mental health well-being project, deployed on Hugging Face.',
+    period:   'July 2023 – Apr 2024',
+    type:     'freelance',
+    badge:    '💼 Freelance',
+    color:    '#d97706',
+    summary:  'Delivered CV and NLP solutions across 4 projects with international teams of 20+ members.',
+    bullets: [
+      'Mapping Automation (HOT Team): Led SAM, FastSAM, YOLO Segmentation on aerial imagery for GIS map automation — 88%+ accuracy with YOLO Segmentation.',
+      'Mental Health NLP: BERT + XGBoost sentiment classification; RAG with Mistral-7B over unstructured text. Deployed on Hugging Face.',
+      'Alzheimer\'s Detection: CNN-based MRI classification achieving 99.2% accuracy via KerasTuner hyperparameter search on ADNI + Kaggle datasets.',
     ],
-    stack: ['YOLO', 'SAM', 'RAG', 'Mistral-7b', 'BERT', 'XGBoost'],
-    link: 'https://huggingface.co/spaces/Omdena-Mental-Health-Team-2/PeacePal',
+    tags: ['YOLO', 'SAM', 'BERT', 'RAG', 'CNN', 'GIS', 'HuggingFace'],
+    links: [
+      { label: 'HOT Mapping', url: 'https://dagshub.com/Omdena/HOTOSM' },
+      { label: 'PeacePal', url: 'https://huggingface.co/spaces/SwatGarg/PeacePal' },
+    ],
   },
   {
-    role: 'Data Scientist Intern',
-    company: 'Innodatatics / 360DigitMg',
+    role:     'Data Scientist Intern',
+    company:  'INNODATATICS · 360DigitMg',
     location: 'Remote',
-    period: 'Aug 2023 – Jan 2024',
-    type: 'Internship',
-    highlights: [
-      'Built YOLOv8 bird-tracking model with 30% accuracy improvement; deployed Flask app for real-time webcam tracking, saving 15+ hours/week.',
-      'Evaluated 10 time series models for medical inventory forecasting — PROPHET achieved 91% accuracy.',
-      'Created Power BI dashboards and Streamlit apps, enabling ≥30% reduction in bounce rate.',
+    period:   'Jan 2023 – June 2023',
+    type:     'internship',
+    badge:    '🎓 Internship',
+    color:    '#0891b2',
+    summary:  'Two end-to-end ML projects with Power BI dashboards and production deployments.',
+    bullets: [
+      'Bird Tracking CV: Annotated 300 images, built YOLOv8 tracking — 30% accuracy improvement. Flask app using live webcam cutting errors by 50%, saving 15+ hours/week.',
+      'Medical Inventory Forecasting: Tested 10 time-series models — Prophet at 91% accuracy. Streamlit app reduced bounce rate by 30% and drove 20+ lacs INR revenue increase.',
     ],
-    stack: ['YOLOv8', 'Flask', 'PROPHET', 'Streamlit', 'Power BI'],
+    tags: ['YOLOv8', 'Flask', 'Prophet', 'Power BI', 'Streamlit'],
   },
   {
-    role: 'Postdoctoral Fellow',
-    company: 'Shanghai Jiao Tong University',
+    role:     'Postdoctoral Fellow',
+    company:  'Shanghai Jiao Tong University',
     location: 'Shanghai, China',
-    period: 'Dec 2019 – Nov 2022',
-    type: 'Research',
-    highlights: [
-      'Built a structured database from 10,000+ research papers (2,700+ entries).',
-      'Applied statistical analysis and modeling to large-scale scientific datasets.',
-      'Published 2 peer-reviewed papers during COVID while working independently.',
-      'Initiated self-learning in ML to predict hyperparameters for neutron-rich nuclei.',
+    period:   'Dec 2019 – Nov 2022',
+    type:     'research',
+    badge:    '🔬 Research',
+    color:    '#64748b',
+    summary:  'Published research while initiating ML self-study that led to the AI engineering transition.',
+    bullets: [
+      'Built a structured database from 10,000+ research papers — 2,700+ entries. Published 2 peer-reviewed papers during COVID, working independently in an international environment.',
+      'Initiated self-learning in ML and data-driven methods to predict hyperparameters for neutron-rich nuclei — the pivot that led to AI engineering.',
     ],
-    stack: ['Statistical Modeling', 'Fortran', 'Python', 'LaTeX'],
-    link: 'https://doi.org/10.1016/j.adt.2022.101546',
+    tags: ['Research', 'Data Analysis', 'ML Self-study', 'Python'],
+    links: [
+      { label: 'Paper 1', url: 'https://doi.org/10.1016/j.adt.2022.101546' },
+      { label: 'Paper 2', url: 'https://doi.org/10.1140/epjst/e2020-000040-8' },
+    ],
   },
 ]
 
 export default function Experience() {
+  const { t } = useTranslation()
+  const { ref: sectionRef, inView } = useInView(0.05)
+
   return (
-    <section id="experience" className={styles.section}>
+    <section id="experience" className={styles.section} ref={sectionRef}>
       <div className={styles.container}>
-        <p className={styles.label}>Experience</p>
-        <h2 className={styles.heading}>Career Timeline</h2>
+        <p className={`${styles.label} ${inView ? styles.visible : ''}`}>
+          {t('experience.label')}
+        </p>
+        <h2 className={`${styles.heading} ${inView ? styles.visible : ''}`}
+            style={{ animationDelay: '0.1s' }}>
+          {t('experience.heading')}
+        </h2>
 
         <div className={styles.timeline}>
-          {/* The center vertical line */}
-          <div className={styles.line} />
-
-          {experiences.map((exp, i) => (
-            <div
-              key={i}
-              className={`${styles.item} ${i % 2 === 0 ? styles.left : styles.right}`}
-            >
-              {/* Dot on the center line */}
-              <div className={styles.dot}>
-                <div className={styles.dotInner} />
-              </div>
-
-              {/* Card */}
-              <div className={styles.card}>
-                <div className={styles.cardTop}>
-                  <div>
-                    <h3 className={styles.role}>{exp.role}</h3>
-                    <p className={styles.company}>{exp.company}</p>
-                    <p className={styles.meta}>{exp.location}</p>
-                  </div>
-                  <div className={styles.periodWrap}>
-                    <span className={styles.period}>{exp.period}</span>
-                    <span className={styles.type}>{exp.type}</span>
-                  </div>
-                </div>
-
-                <ul className={styles.highlights}>
-                  {exp.highlights.map((h, j) => (
-                    <li key={j}>{h}</li>
-                  ))}
-                </ul>
-
-                <div className={styles.footer}>
-                  <div className={styles.stack}>
-                    {exp.stack.map(s => (
-                      <span key={s} className={styles.pill}>{s}</span>
-                    ))}
-                  </div>
-                  {exp.link && (
-                    <a href={exp.link} target="_blank" rel="noreferrer" className={styles.linkBtn}>
-                      View ↗
-                    </a>
-                  )}
-                </div>
-              </div>
-            </div>
+          {EXPERIENCES.map((exp, i) => (
+            <ExperienceCard
+              key={exp.company + exp.period}
+              exp={exp}
+              index={i}
+              globalVisible={inView}
+            />
           ))}
         </div>
       </div>
     </section>
+  )
+}
+
+function ExperienceCard({ exp, index, globalVisible }) {
+  const [expanded, setExpanded] = useState(index === 0)
+  const { ref, inView } = useInView(0.1)
+  const isLeft = index % 2 === 0
+
+  return (
+    <div
+      ref={ref}
+      className={`${styles.item} ${inView ? styles.itemVisible : ''} ${isLeft ? styles.left : styles.right}`}
+      style={{ animationDelay: `${index * 0.1}s` }}
+    >
+      {/* Connector dot */}
+      <div className={styles.dot} style={{ background: exp.color }} />
+
+      {/* Card */}
+      <div
+        className={styles.card}
+        style={{ borderTopColor: exp.color }}
+        onClick={() => setExpanded(e => !e)}
+      >
+        {/* Header */}
+        <div className={styles.cardHeader}>
+          <div className={styles.cardMeta}>
+            <span className={styles.badge}
+                  style={{ background: `${exp.color}18`, color: exp.color }}>
+              {exp.badge}
+            </span>
+            <span className={styles.period}>{exp.period}</span>
+          </div>
+          <h3 className={styles.role}>{exp.role}</h3>
+          <div className={styles.companyRow}>
+            <span className={styles.company}>{exp.company}</span>
+            <span className={styles.location}>· {exp.location}</span>
+          </div>
+          <p className={styles.summary}>{exp.summary}</p>
+          <div className={styles.tags}>
+            {exp.tags.map(tag => (
+              <span key={tag} className={styles.tag}
+                    style={{ background: `${exp.color}12`, color: exp.color }}>
+                {tag}
+              </span>
+            ))}
+          </div>
+        </div>
+
+        {/* Expandable bullets */}
+        {expanded && (
+          <div className={styles.bullets}>
+            <ul>
+              {exp.bullets.map((b, i) => (
+                <li key={i}>{b}</li>
+              ))}
+            </ul>
+            {/* Links */}
+            {(exp.link || exp.links) && (
+              <div className={styles.links}>
+                {exp.link && (
+                  <a href={exp.link} target="_blank" rel="noreferrer"
+                     onClick={e => e.stopPropagation()}>
+                    View Project ↗
+                  </a>
+                )}
+                {exp.links?.map(l => (
+                  <a key={l.label} href={l.url} target="_blank" rel="noreferrer"
+                     onClick={e => e.stopPropagation()}>
+                    {l.label} ↗
+                  </a>
+                ))}
+              </div>
+            )}
+          </div>
+        )}
+
+        {/* Expand toggle */}
+        <button
+          className={styles.toggle}
+          onClick={e => { e.stopPropagation(); setExpanded(v => !v) }}
+          aria-label={expanded ? 'Collapse' : 'Expand'}
+        >
+          {expanded ? '▲ Less' : '▼ More'}
+        </button>
+      </div>
+    </div>
   )
 }

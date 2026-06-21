@@ -22,9 +22,9 @@
   },
   "about": {
     "label": "Tietoa",
-    "heading": "Ydinfysiikasta\ntekoälyinsinöörityöhön",
-    "p1": "Fysiikan tohtori, jolla on 3 vuotta postdoc-tutkimuskokemusta ja yli 2 vuotta tekoälyinsinöörin työtä teollisuudessa. Rakennan ja otan käyttöön koneoppimisratkaisuja — NLP, LLM-pohjaiset sovellukset ja konenäkö — vahvalla Python-osaamisella ja tiedemiehen tarkkuudella.",
-    "p2": "Olen kehittänyt pilvipalvelujärjestelmiä Google Cloudissa, työskennellyt reaalimaailman datan parissa terveydenhuollon, majoitusalan ja koulutussektorin projekteissa ja viihdyn moniammatillisissa tiimeissä.",
+    "heading": "Tutkimussyvyys\nkohtaa tuotantoälyn",
+    "p1": "Vuosikymmen tieteellistä tutkimusta opetti minulle tavan lähestyä epäselviä ongelmia ensimmäisistä periaatteista ja validoida tulokset huolellisesti — taidot, jotka siirtyvät suoraan luotettavien tekoälyjärjestelmien rakentamiseen. Sovellan nyt tätä ajattelutapaa tuotanto-ML:ään: LLM-sovellukset, RAG-putket, konenäkö ja pilviympäristöt.",
+    "p2": "Wasimililla olin ainoa tekoälyinsinööri — omistin koko pinon arkkitehtuurista käyttöönottoon yli 150 hotellia-asiakkaan palvelemiseksi. Kokemus itsenäisestä rakentamisesta todellisten rajoitusten alaisena on jotain, mitä mikään kurssi ei voi korvata.",
     "tags": ["NLP & LLM", "Konenäkö", "RAG-järjestelmät", "Pilvi (GCP)", "Tilastollinen mallinnus", "Moniagenttitekoäly"]
   },
   "experience": {
