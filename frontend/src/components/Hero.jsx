@@ -2,9 +2,9 @@ import { useTranslation } from 'react-i18next'
 import styles from './Hero.module.css'
 
 // ── ADD YOUR PHOTO ─────────────────────────────────────────────────────────
-// import profilePhoto from '../assets/swati-photo.jpg'
-// const PHOTO = profilePhoto
-const PHOTO = null
+import profilePhoto from '../assets/swati-photo.jpg'
+const PHOTO = profilePhoto
+//const PHOTO = null
 
 export default function Hero() {
   const { t } = useTranslation()
