@@ -6,6 +6,57 @@ import profilePhoto from '../assets/swati-photo.png'
 const PHOTO = profilePhoto
 //const PHOTO = null
 
+
+// ── Animated tagline — words appear one by one ──────────────────────────────
+function AnimatedTagline({ text, className }) {
+  // Split on spaces but preserve <em> tags intact
+  const parts = text.split(/(<em>.*?<\/em>|\s+)/).filter(Boolean)
+  let delay = 0.5  // start after name appears
+
+  return (
+    <p className={className}>
+      {parts.map((part, i) => {
+        if (/^\s+$/.test(part)) return <span key={i}> </span>
+        const d = delay
+        delay += 0.04
+        if (part.startsWith('<em>')) {
+          const inner = part.replace(/<\/?em>/g, '')
+          return (
+            <em
+              key={i}
+              style={{
+                fontStyle: 'normal',
+                fontWeight: 700,
+                background: 'linear-gradient(135deg, #aa3bff 0%, #6366f1 100%)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                backgroundClip: 'text',
+                display: 'inline-block',
+                opacity: 0,
+                animation: `typewriter 0.4s ${d}s ease both`,
+              }}
+            >
+              {inner}
+            </em>
+          )
+        }
+        return (
+          <span
+            key={i}
+            style={{
+              display: 'inline-block',
+              opacity: 0,
+              animation: `typewriter 0.35s ${d}s ease both`,
+            }}
+          >
+            {part}
+          </span>
+        )
+      })}
+    </p>
+  )
+}
+
 export default function Hero() {
   const { t } = useTranslation()
 
@@ -29,10 +80,10 @@ export default function Hero() {
         <p className={styles.eyebrow}>{t('hero.eyebrow')}</p>
         <h1 className={styles.name}>Dr. Swati Garg</h1>
 
-        {/* tagline uses dangerouslySetInnerHTML for the <em> tags */}
-        <p
+        {/* Typewriter tagline — words animate in one by one */}
+        <AnimatedTagline
+          text={t('hero.tagline')}
           className={styles.tagline}
-          dangerouslySetInnerHTML={{ __html: t('hero.tagline') }}
         />
 
         <div className={styles.location}>

@@ -1,7 +1,7 @@
 /* ── Section ──────────────────────────────────────────────────────────────── */
 .section {
   padding: 6rem 0 5rem;
-  background: var(--surface);
+  background: var(--surface-2);   /* blue tint — alternates with About purple tint */
 }
 
 .container {
@@ -48,6 +48,15 @@
   opacity: 0;
 }
 
+/* Accent word in heading */
+.heading em {
+  font-style: normal;
+  background: var(--grad-accent);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
 .heading.visible {
   animation: fadeInUp 0.55s ease both;
 }
@@ -66,7 +75,11 @@
   left: 50%;
   top: 0; bottom: 0;
   width: 2px;
-  background: linear-gradient(to bottom, var(--accent), var(--border));
+  background: linear-gradient(to bottom,
+    var(--accent) 0%,
+    var(--indigo) 30%,
+    var(--teal) 60%,
+    var(--border) 100%);
   transform: translateX(-50%);
 }
 
@@ -99,10 +112,11 @@
 
 /* ── Card ─────────────────────────────────────────────────────────────────── */
 .card {
-  background: var(--bg);
+  background: rgba(255,255,255,0.85);
+  backdrop-filter: blur(8px);
   border: 1px solid var(--border);
   border-top: 3px solid;
-  border-radius: 12px;
+  border-radius: 14px;
   padding: 1.4rem 1.5rem 1rem;
   cursor: pointer;
   transition: box-shadow 0.2s, transform 0.2s;

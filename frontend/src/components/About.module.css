@@ -1,7 +1,7 @@
 /* ── Section ──────────────────────────────────────────────────────────────── */
 .section {
   padding: 7rem 0 5rem;
-  background: var(--bg);
+  background: var(--surface);   /* light purple tint — different from white hero */
 }
 
 .container {
@@ -64,7 +64,10 @@
 }
 
 .headingLine:last-child {
-  color: var(--accent);
+  background: var(--grad-accent);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 /* ── Main grid ───────────────────────────────────────────────────────────── */
@@ -138,18 +141,32 @@
   display: flex;
   align-items: flex-start;
   gap: 1rem;
-  padding: 1.1rem 1.25rem;
-  border-radius: 12px;
-  background: var(--surface);
+  padding: 1.25rem 1.4rem;
+  border-radius: 14px;
+  background: var(--bg);
   border: 1px solid var(--border);
+  border-left: 4px solid transparent;
   opacity: 0;
   transition: box-shadow 0.2s, transform 0.2s, border-color 0.2s;
 }
 
+/* Each card gets a distinct accent color */
+.card:nth-child(1) {
+  border-left-color: var(--accent);
+  background: linear-gradient(135deg, rgba(170,59,255,0.04) 0%, var(--bg) 100%);
+}
+.card:nth-child(2) {
+  border-left-color: var(--teal);
+  background: linear-gradient(135deg, rgba(13,148,136,0.04) 0%, var(--bg) 100%);
+}
+.card:nth-child(3) {
+  border-left-color: var(--coral);
+  background: linear-gradient(135deg, rgba(244,63,94,0.04) 0%, var(--bg) 100%);
+}
+
 .card:hover {
-  box-shadow: 0 4px 24px rgba(37,99,235,0.1);
+  box-shadow: var(--shadow-md);
   transform: translateX(-4px);
-  border-color: rgba(37,99,235,0.25);
 }
 
 .cardVisible {
@@ -157,10 +174,19 @@
 }
 
 .cardIcon {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   flex-shrink: 0;
-  margin-top: 0.1rem;
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(170,59,255,0.08);
 }
+.card:nth-child(1) .cardIcon { background: rgba(170,59,255,0.10); }
+.card:nth-child(2) .cardIcon { background: rgba(13,148,136,0.10); }
+.card:nth-child(3) .cardIcon { background: rgba(244,63,94,0.10); }
 
 .cardTitle {
   font-size: 0.88rem;
