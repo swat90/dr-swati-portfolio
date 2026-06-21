@@ -10,22 +10,30 @@
   },
   "hero": {
     "eyebrow": "Data Scientist · AI Engineer · NLP Specialist",
-    "tagline": "Building intelligent systems at the intersection of <em>science</em> and <em>machine learning</em> — from nuclear physics research to production AI for 150+ businesses.",
+    "tagline": "Building production AI systems at the intersection of <em>scientific rigour</em> and <em>engineering craft</em> — 3 years in industry AI, previously a decade in research.",
     "location": "Oulu, Finland",
     "open_to": "Open to remote & relocation",
     "btn_experience": "View Experience",
     "btn_work": "See My Work",
     "btn_contact": "Get in Touch",
-    "stat_years": "Years in AI & Research",
-    "stat_clients": "Business Clients",
-    "stat_papers": "Published Papers"
+    "stat_years": "Years in Industry AI",
+    "stat_clients": "B2B SaaS Hotel Clients",
+    "stat_papers": "Published Research Papers",
+    "stat_research": "Years in Academic Research"
   },
   "about": {
     "label": "About",
     "heading": "Research Depth\nMeets Production AI",
     "p1": "A decade of scientific research trained me to tackle ambiguous problems, think in first principles, and validate rigorously — skills that translate directly into building reliable AI systems. Now I apply that mindset to production ML: LLM applications, RAG pipelines, computer vision, and cloud deployments.",
     "p2": "At Wasimil I was the sole AI engineer — owning the full stack from architecture through deployment for 150+ hotel clients. That experience of building independently under real constraints is something no course can replicate.",
-    "tags": ["NLP & LLMs", "Computer Vision", "RAG Systems", "Cloud (GCP)", "Statistical Modeling", "Multi-Agent AI"]
+    "tags": [
+      "NLP & LLMs",
+      "Computer Vision",
+      "RAG Systems",
+      "Cloud (GCP)",
+      "Statistical Modeling",
+      "Multi-Agent AI"
+    ]
   },
   "experience": {
     "label": "Experience",

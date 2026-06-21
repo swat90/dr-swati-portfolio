@@ -61,16 +61,21 @@ export default function Hero() {
           <a href="https://scholar.google.com/citations?user=xgJjVMYAAAAJ&hl=en" target="_blank" rel="noreferrer">Google Scholar</a>
         </div>
 
-        {/* Stats bar */}
+        {/* Stats bar — 4 stats showing industry + research background */}
         <div className={styles.stats}>
           <div className={styles.stat}>
-            <span className={styles.statNum}>5+</span>
+            <span className={styles.statNum}>3+</span>
             <span className={styles.statLabel}>{t('hero.stat_years')}</span>
           </div>
           <div className={styles.statDivider} />
           <div className={styles.stat}>
             <span className={styles.statNum}>150+</span>
             <span className={styles.statLabel}>{t('hero.stat_clients')}</span>
+          </div>
+          <div className={styles.statDivider} />
+          <div className={styles.stat}>
+            <span className={styles.statNum}>10+</span>
+            <span className={styles.statLabel}>{t('hero.stat_research')}</span>
           </div>
           <div className={styles.statDivider} />
           <div className={styles.stat}>

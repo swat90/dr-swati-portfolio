@@ -10,22 +10,30 @@
   },
   "hero": {
     "eyebrow": "Datavetare · AI-ingenjör · NLP-specialist",
-    "tagline": "Bygger intelligenta system i skärningspunkten mellan <em>vetenskap</em> och <em>maskininlärning</em> — från kärnfysikforskning till produktions-AI för 150+ företag.",
+    "tagline": "Bygger produktions-AI-system i skärningspunkten mellan <em>vetenskaplig stringens</em> och <em>ingenjörskonst</em> — 3 år inom industri-AI, dessförinnan ett decennium inom forskning.",
     "location": "Uleåborg, Finland",
     "open_to": "Öppen för distans- och lokala möjligheter",
     "btn_experience": "Se erfarenhet",
     "btn_work": "Se mina arbeten",
     "btn_contact": "Ta kontakt",
-    "stat_years": "År inom AI & forskning",
-    "stat_clients": "Företagskunder",
-    "stat_papers": "Publicerade artiklar"
+    "stat_years": "År inom industri-AI",
+    "stat_clients": "B2B SaaS hotellkunder",
+    "stat_papers": "Publicerade artiklar",
+    "stat_research": "År i akademisk forskning"
   },
   "about": {
     "label": "Om mig",
     "heading": "Forskningsdjup\nmöter produktions-AI",
     "p1": "Ett decennium av vetenskaplig forskning lärde mig att ta sig an oklara problem med grundprinciper och validera rigoröst — färdigheter som direkt överförs till att bygga tillförlitliga AI-system. Nu tillämpar jag det tänkesättet på produktions-ML: LLM-applikationer, RAG-pipelines, datorseende och molndriftsättning.",
     "p2": "På Wasimil var jag ensam AI-ingenjör — ansvarade för hela stacken från arkitektur till driftsättning för 150+ hotellkunder. Erfarenheten av att bygga självständigt under verkliga begränsningar är något inget kursutbud kan ersätta.",
-    "tags": ["NLP & LLM", "Datorseende", "RAG-system", "Moln (GCP)", "Statistisk modellering", "Multi-agent AI"]
+    "tags": [
+      "NLP & LLM",
+      "Datorseende",
+      "RAG-system",
+      "Moln (GCP)",
+      "Statistisk modellering",
+      "Multi-agent AI"
+    ]
   },
   "experience": {
     "label": "Erfarenhet",

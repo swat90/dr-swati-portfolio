@@ -10,22 +10,30 @@
   },
   "hero": {
     "eyebrow": "Data-tieteilijä · Tekoälyteknikko · NLP-asiantuntija",
-    "tagline": "Rakennan älykkäitä järjestelmiä <em>tieteen</em> ja <em>koneoppimisen</em> risteyksessä — ydinfysiikan tutkimuksesta tuotantotekoälyyn 150+ yritykselle.",
+    "tagline": "Rakennan tuotantotekoälyjärjestelmiä <em>tieteellisen tarkkuuden</em> ja <em>insinööriosaamisen</em> risteyksessä — 3 vuotta toimialatekoälyssä, aiemmin vuosikymmen tutkimuksessa.",
     "location": "Oulu, Suomi",
     "open_to": "Avoin etä- ja paikallisiin mahdollisuuksiin",
     "btn_experience": "Katso kokemus",
     "btn_work": "Katso työnäytteet",
     "btn_contact": "Ota yhteyttä",
-    "stat_years": "Vuotta tekoälyssä & tutkimuksessa",
-    "stat_clients": "Yritysasiakasta",
-    "stat_papers": "Julkaistua artikkelia"
+    "stat_years": "Vuotta toimialatekoälyssä",
+    "stat_clients": "B2B SaaS hotellia-asiakasta",
+    "stat_papers": "Julkaistua artikkelia",
+    "stat_research": "Vuotta akateemisessa tutkimuksessa"
   },
   "about": {
     "label": "Tietoa",
     "heading": "Tutkimussyvyys\nkohtaa tuotantoälyn",
     "p1": "Vuosikymmen tieteellistä tutkimusta opetti minulle tavan lähestyä epäselviä ongelmia ensimmäisistä periaatteista ja validoida tulokset huolellisesti — taidot, jotka siirtyvät suoraan luotettavien tekoälyjärjestelmien rakentamiseen. Sovellan nyt tätä ajattelutapaa tuotanto-ML:ään: LLM-sovellukset, RAG-putket, konenäkö ja pilviympäristöt.",
     "p2": "Wasimililla olin ainoa tekoälyinsinööri — omistin koko pinon arkkitehtuurista käyttöönottoon yli 150 hotellia-asiakkaan palvelemiseksi. Kokemus itsenäisestä rakentamisesta todellisten rajoitusten alaisena on jotain, mitä mikään kurssi ei voi korvata.",
-    "tags": ["NLP & LLM", "Konenäkö", "RAG-järjestelmät", "Pilvi (GCP)", "Tilastollinen mallinnus", "Moniagenttitekoäly"]
+    "tags": [
+      "NLP & LLM",
+      "Konenäkö",
+      "RAG-järjestelmät",
+      "Pilvi (GCP)",
+      "Tilastollinen mallinnus",
+      "Moniagenttitekoäly"
+    ]
   },
   "experience": {
     "label": "Kokemus",

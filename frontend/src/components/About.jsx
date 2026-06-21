@@ -2,37 +2,6 @@ import { useEffect, useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import styles from './About.module.css'
 
-// ── Animated counter hook ─────────────────────────────────────────────────────
-function useCountUp(target, duration = 1800, startOnVisible = true) {
-  const [count, setCount] = useState(0)
-  const [started, setStarted] = useState(false)
-  const ref = useRef(null)
-
-  useEffect(() => {
-    if (!startOnVisible) return
-    const observer = new IntersectionObserver(
-      ([entry]) => { if (entry.isIntersecting && !started) setStarted(true) },
-      { threshold: 0.3 }
-    )
-    if (ref.current) observer.observe(ref.current)
-    return () => observer.disconnect()
-  }, [started, startOnVisible])
-
-  useEffect(() => {
-    if (!started) return
-    let start = 0
-    const step = Math.ceil(target / (duration / 16))
-    const timer = setInterval(() => {
-      start += step
-      if (start >= target) { setCount(target); clearInterval(timer) }
-      else setCount(start)
-    }, 16)
-    return () => clearInterval(timer)
-  }, [started, target, duration])
-
-  return { count, ref }
-}
-
 // ── Intersection observer hook ────────────────────────────────────────────────
 function useInView(threshold = 0.15) {
   const ref  = useRef(null)
@@ -70,10 +39,6 @@ const VALUE_CARDS = [
 export default function About() {
   const { t }                  = useTranslation()
   const { ref: sectionRef, inView: sectionVisible } = useInView(0.1)
-
-  const { count: years,   ref: yearsRef   } = useCountUp(5)
-  const { count: clients, ref: clientsRef } = useCountUp(150)
-  const { count: papers,  ref: papersRef  } = useCountUp(10)
 
   return (
     <section id="about" className={styles.section} ref={sectionRef}>
@@ -133,24 +98,7 @@ export default function About() {
           </div>
         </div>
 
-        {/* Animated stats bar */}
-        <div className={`${styles.stats} ${sectionVisible ? styles.fadeInUp : ''}`}
-             style={{ animationDelay: '0.45s' }}>
-          <div className={styles.stat} ref={yearsRef}>
-            <span className={styles.statNum}>{years}+</span>
-            <span className={styles.statLabel}>{t('hero.stat_years')}</span>
-          </div>
-          <div className={styles.statDivider} />
-          <div className={styles.stat} ref={clientsRef}>
-            <span className={styles.statNum}>{clients}+</span>
-            <span className={styles.statLabel}>{t('hero.stat_clients')}</span>
-          </div>
-          <div className={styles.statDivider} />
-          <div className={styles.stat} ref={papersRef}>
-            <span className={styles.statNum}>{papers}+</span>
-            <span className={styles.statLabel}>{t('hero.stat_papers')}</span>
-          </div>
-        </div>
+
 
       </div>
     </section>
