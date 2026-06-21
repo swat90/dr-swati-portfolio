@@ -1,89 +1,185 @@
+import { useRef, useState, useEffect } from 'react'
+import { useTranslation } from 'react-i18next'
 import styles from './Education.module.css'
 
-const education = [
+function useInView(threshold = 0.1) {
+  const ref = useRef(null)
+  const [inView, setInView] = useState(false)
+  useEffect(() => {
+    const obs = new IntersectionObserver(
+      ([e]) => { if (e.isIntersecting) setInView(true) },
+      { threshold }
+    )
+    if (ref.current) obs.observe(ref.current)
+    return () => obs.disconnect()
+  }, [threshold])
+  return { ref, inView }
+}
+
+const EDUCATION = [
   {
-    degree: 'Ph.D. in Nuclear Physics',
+    degree:      'Ph.D. in Nuclear Physics',
     institution: 'Indian Institute of Technology Roorkee',
-    location: 'India',
-    period: 'Jul 2013 – Oct 2019',
-    thesis: '"Role of Isospin in Heavy and Neutron-Rich Nuclei"',
-    points: [
-      'Conducted advanced research on nuclear structure using large-scale scientific datasets and theoretical modeling.',
-      'Developed strong data analysis and problem-solving skills through complex research questions and quantitative studies.', 
-      'Published 10+ research papers in international journals and conference proceedings.', 
-      'Gained experience in scientific writing (LaTeX), data interpretation, and structured documentation of technical work.', 
-      'Built strong communication skills through teaching, conference presentations, and collaboration in international research environments.', 
-      'Recipient of MHRD Fellowship (2013–2018).',
-      'Vice-President of Physics Association, IIT Roorkee (2014–2015).',
+    location:    'Roorkee, India',
+    period:      'July 2013 – Oct 2019',
+    color:       '#aa3bff',
+    thesis:      'Role of Isospin in Heavy and Neutron-Rich Nuclei',
+    highlights: [
+      'Conducted large-scale theoretical research on nuclear structure using custom datasets and Fortran-based modeling',
+      'Teaching Assistant 2014–2017 — led weekly lab and tutorial sessions for 60+ B.Tech and M.Sc. students across 3 courses',
+      'Organized a 2-week International Nuclear Physics School at Amity University (2019) — full logistics for 20+ international participants: timetable, accommodation, catering, teaching support',
+      'Vice-President, Physics Association, IIT Roorkee (2014–2015)',
+      'Invited oral presentation, Dalian International Workshop, China (2020)',
+      'ML for Nuclear Physics workshop, ECT* European Centre, Trieste, Italy (2021) — documented start of ML self-study',
+      'Published 10+ peer-reviewed papers; 5 oral presentations at international conferences',
     ],
   },
   {
-    degree: 'M.Sc. (H.S.) in Physics',
+    degree:      'M.Sc. (H.S.) in Physics',
     institution: 'Panjab University',
-    location: 'Chandigarh, India',
-    period: 'Jul 2010 – Jun 2012',
-    grade: '74.15%',
-    points: [],
-  },
-  {
-    degree: 'B.Sc. in Physics, Chemistry, Maths',
-    institution: 'D.A.V. College',
-    Affilation: 'Panjab University, Chandigarh, India',
-    location: 'Malout, India',
-    period: 'Jul 2007 – Jun 2010',
-    grade: '84.3%',
-    points: [],
+    location:    'Chandigarh, India',
+    period:      '2010 – 2012',
+    color:       '#6366f1',
+    highlights: [
+      'First class honours — 74.15%',
+    ],
   },
 ]
 
-const achievements = [
-  'Grant from National Natural Science Foundation of China (Dec 2019 – Nov 2022)',
-  'Cleared GATE 2013 with All India Rank 85',
-  'Life member, Indian Physics Association',
+const ACHIEVEMENTS = [
+  { icon: '🏆', text: 'GATE 2013 — All India Rank 85 (Graduate Aptitude Test in Engineering)' },
+  { icon: '🎓', text: 'MHRD Fellowship recipient — Ministry of Human Resource Development, Govt. of India (2013–2018)' },
+  { icon: '🌏', text: 'National Natural Science Foundation of China grant — Shanghai Jiao Tong University (2019–2022)' },
+  { icon: '📚', text: 'Life Member, Indian Physics Association' },
+  { icon: '🎖️', text: 'Merit holder — 8th, 10th and 12th grade, Punjab School Education Board' },
+]
+
+const COMMUNITY = [
+  {
+    icon: '🌿',
+    role: 'Volunteer Member',
+    org:  'Vuolle Volunteer Community',
+    location: 'Oulu, Finland',
+    period: '2025 – present',
+    detail: 'Guest welcoming and nature education at community events',
+    color: '#10b981',
+  },
+  {
+    icon: '🗺️',
+    role: 'Volunteer Guide (upcoming)',
+    org:  'VisitOulu',
+    location: 'Oulu, Finland',
+    period: '2026',
+    detail: 'City tourism guide — actively integrating into Oulu community',
+    color: '#0d9488',
+  },
 ]
 
 export default function Education() {
-  return (
-    <section id="education" className={styles.section}>
-      <div className={styles.container}>
-        <p className={styles.label}>Education & Achievements</p>
-        <h2 className={styles.heading}>Academic Background</h2>
+  const { t } = useTranslation()
+  const { ref, inView } = useInView(0.05)
 
-        <div className={styles.grid}>
-          <div>
-            {education.map((edu, i) => (
-              <div key={i} className={styles.card}>
-                <div className={styles.cardHeader}>
-                  <div>
-                    <h3 className={styles.degree}>{edu.degree}</h3>
-                    <p className={styles.institution}>{edu.institution}</p>
-                    <p className={styles.meta}>{edu.location}</p>
-                  </div>
-                  <span className={styles.period}>{edu.period}</span>
+  return (
+    <section id="education" className={styles.section} ref={ref}>
+      <div className={styles.container}>
+        <p className={`${styles.label} ${inView ? styles.visible : ''}`}>
+          {t('education.label')}
+        </p>
+        <h2 className={`${styles.heading} ${inView ? styles.visible : ''}`}
+            style={{ animationDelay: '0.1s' }}>
+          {t('education.heading')}
+        </h2>
+
+        {/* Education cards */}
+        <div className={styles.eduGrid}>
+          {EDUCATION.map((edu, i) => (
+            <div
+              key={edu.degree}
+              className={`${styles.eduCard} ${inView ? styles.cardVisible : ''}`}
+              style={{
+                animationDelay: `${0.15 + i * 0.1}s`,
+                borderTop: `3px solid ${edu.color}`,
+                background: `linear-gradient(135deg, ${edu.color}08 0%, #ffffff 60%)`,
+              }}
+            >
+              <div className={styles.eduHeader}>
+                <div>
+                  <h3 className={styles.degree} style={{ color: edu.color }}>
+                    {edu.degree}
+                  </h3>
+                  <p className={styles.institution}>{edu.institution}</p>
+                  <p className={styles.eduMeta}>
+                    <span>{edu.location}</span>
+                    <span className={styles.dot}>·</span>
+                    <span>{edu.period}</span>
+                  </p>
                 </div>
-                {edu.thesis && <p className={styles.thesis}>Thesis: {edu.thesis}</p>}
-                {edu.grade && <p className={styles.grade}>Grade: {edu.grade}</p>}
-                {edu.points.length > 0 && (
-                  <ul className={styles.points}>
-                    {edu.points.map((p, j) => <li key={j}>{p}</li>)}
-                  </ul>
-                )}
+              </div>
+              {edu.thesis && (
+                <p className={styles.thesis}>
+                  <strong>Thesis:</strong> "{edu.thesis}"
+                </p>
+              )}
+              {edu.highlights && (
+                <ul className={styles.highlights}>
+                  {edu.highlights.map((h, j) => (
+                    <li key={j} style={{ '--dot-color': edu.color }}>
+                      {h}
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </div>
+          ))}
+        </div>
+
+        {/* Achievements */}
+        <div className={`${styles.achievementsWrap} ${inView ? styles.cardVisible : ''}`}
+             style={{ animationDelay: '0.35s' }}>
+          <h3 className={styles.subheading}>{t('education.achievements_title')}</h3>
+          <div className={styles.achievementsGrid}>
+            {ACHIEVEMENTS.map((a, i) => (
+              <div key={i} className={styles.achievement}>
+                <span className={styles.achieveIcon}>{a.icon}</span>
+                <span>{a.text}</span>
               </div>
             ))}
           </div>
+        </div>
 
-          <div className={styles.achievementsBox}>
-            <h3 className={styles.achHeading}>Achievements & Affiliations</h3>
-            <ul className={styles.achList}>
-              {achievements.map((a, i) => (
-                <li key={i}>
-                  <span className={styles.star}>★</span>
-                  {a}
-                </li>
-              ))}
-            </ul>
+        {/* Community & Volunteering */}
+        <div className={`${styles.communityWrap} ${inView ? styles.cardVisible : ''}`}
+             style={{ animationDelay: '0.45s' }}>
+          <h3 className={styles.subheading}>🤝 Community & Volunteering</h3>
+          <p className={styles.communityNote}>
+            Actively building roots in Oulu — relevant for Finnish employers
+            looking for candidates committed to the region.
+          </p>
+          <div className={styles.communityGrid}>
+            {COMMUNITY.map((c, i) => (
+              <div
+                key={i}
+                className={styles.communityCard}
+                style={{
+                  borderLeft: `4px solid ${c.color}`,
+                  background: `linear-gradient(135deg, ${c.color}0a 0%, #ffffff 70%)`,
+                }}
+              >
+                <span className={styles.communityIcon}>{c.icon}</span>
+                <div>
+                  <p className={styles.communityRole}
+                     style={{ color: c.color }}>
+                    {c.role}
+                  </p>
+                  <p className={styles.communityOrg}>{c.org} · {c.location}</p>
+                  <p className={styles.communityPeriod}>{c.period}</p>
+                  <p className={styles.communityDetail}>{c.detail}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
+
       </div>
     </section>
   )

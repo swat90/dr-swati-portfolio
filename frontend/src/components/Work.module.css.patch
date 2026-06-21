@@ -40,3 +40,54 @@
   color: #fff !important;
   box-shadow: 0 4px 12px rgba(170,59,255,0.35) !important;
 }
+
+/* ── Live badge ───────────────────────────────────────────────────────────── */
+.badgeLive {
+  background: linear-gradient(135deg, #ff4444, #ff0080) !important;
+  color: #fff !important;
+  font-weight: 700 !important;
+}
+
+/* Pulsing LIVE indicator */
+.livePulse {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.6rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  color: #16a34a;
+  background: #dcfce7;
+  border: 1px solid #86efac;
+  padding: 0.15rem 0.5rem;
+  border-radius: 100px;
+}
+
+.liveDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #16a34a;
+  display: inline-block;
+  animation: livePulseAnim 1.5s ease-in-out infinite;
+}
+
+@keyframes livePulseAnim {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: 0.4; transform: scale(0.7); }
+}
+
+/* Live Demo tab button — special styling */
+.tab[data-live="true"],
+.tabActive[data-live="true"] {
+  background: linear-gradient(135deg, #ff4444, #ff0080) !important;
+  border-color: transparent !important;
+  color: #fff !important;
+  box-shadow: 0 4px 12px rgba(255,0,128,0.35) !important;
+}
+
+/* Cards in Live Demos tab get a special left border */
+.card[data-live="true"] {
+  border-left: 3px solid #16a34a !important;
+  background: linear-gradient(135deg, #f0fdf4 0%, #ffffff 60%) !important;
+}

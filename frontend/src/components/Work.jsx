@@ -25,6 +25,7 @@ import speech             from '../assets/showcase/translate.png'
 
 const TABS = [
   'All',
+  '🔴 Live Demos',
   'Production Systems',
   'Dashboards & Automation',
   'Open Source',
@@ -226,15 +227,16 @@ const items = [
 
   // ── COMING SOON ───────────────────────────────────────────────────────────
   {
-    tab: 'Production Systems',        // ← move from Coming Soon to Production
+    tab: 'Production Systems',
+    tabExtra: '🔴 Live Demos',
     icon: '🍜',
-    badge: 'Live · Streamlit',
-    badgeColor: 'green',              // ← green since it's live
+    badge: '🔴 Live Demo',
+    badgeColor: 'live',
     title: 'Oulu Restaurant Sentiment Dashboard',
     subtitle: 'BERT · Make.com · Apify · Google Sheets · Streamlit',
     description: 'End-to-end NLP pipeline scraping Google Maps reviews for Indian/Pakistani restaurants in Oulu. Make.com orchestrates weekly scraping via Apify → sentiment scored using nlptown/bert-base-multilingual → results stored in Google Sheets → visualised in a live interactive Streamlit dashboard.\n\nFeatures aspect-based scoring across 19 dimensions: food quality, service, spice level, authenticity, cleanliness, vegetarian options, chicken/lamb dishes, and more. Supports English and Finnish reviews. Dashboard shows radar charts, restaurant comparison heatmaps, trends over time, and recommended dish frequency.',
     impact: 'Live Oulu data · 2000+ reviews · 19 aspect dimensions · EN & FI',
-    image: reviewImg,
+    image: 'reviewImg',
     images: null,
     tags: ['Make.com', 'Apify', 'BERT', 'NLP', 'Streamlit', 'Google Sheets', 'Python'],
     note: 'Live dashboard — data updates weekly via automated pipeline.',
@@ -245,23 +247,21 @@ const items = [
     placeholder: { icon: '🍜', color: '#2563eb', label: '' },
   },
   {
-    tab: 'Production Systems',
+    tab: 'Coming Soon',
     icon: '🍽️',
-    badge: 'Live · Supabase',
-    badgeColor: 'green',
-    title: 'Oulu Restaurant Booking Chatbot',
-    subtitle: 'LangChain · Gemini · Supabase · pgvector · CircleCI',
-    description: 'Agentic AI chatbot for Indian/South Asian restaurants in Oulu. Users chat naturally — the bot understands intent, checks real-time availability from Supabase PostgreSQL, creates confirmed bookings with a reference number, and answers questions using RAG over real customer reviews (pgvector semantic search).\n\n6 LangChain tools: restaurant search, menu browsing, availability checking, table booking (writes to DB), review RAG, booking management. CircleCI runs automated tests on every push.',
-    impact: '6 agent tools · Live Supabase DB · pgvector RAG · CircleCI CI/CD',
+    badge: 'In Progress',
+    badgeColor: 'warm',
+    title: 'Restaurant Booking Chatbot',
+    subtitle: 'Agentic AI · Supabase · Intent detection · Reservation management',
+    description: 'Agentic chatbot for restaurant table bookings. Users chat naturally — the bot understands intent (book table, check availability, modify reservation), reads and writes to a Supabase PostgreSQL database, and confirms bookings in conversation.\n\nTwo modes planned: a RAG mode letting users ask questions about the restaurant from its review data, and a booking mode where the agent handles the full reservation flow end-to-end.',
+    impact: 'Full agentic flow · Supabase free tier · Portfolio demo',
     image: null,
     images: null,
-    tags: ['LangChain', 'Gemini', 'Supabase', 'pgvector', 'RAG', 'CircleCI', 'Streamlit'],
-    note: 'Live demo — bookings stored in real PostgreSQL database.',
+    tags: ['LangChain', 'Supabase', 'PostgreSQL', 'Streamlit', 'RAG', 'Agentic AI'],
+    note: 'Currently building — will be deployed on Streamlit Cloud.',
     videoUrl: null,
-    demo: 'https://oulu-restaurant-chatbot.streamlit.app',
-    demoLabel: 'Open Chatbot ↗',
-    comingSoon: false,
-    placeholder: { icon: '🍽️', color: '#059669', label: '' },
+    comingSoon: true,
+    placeholder: { icon: '🍽️', color: '#059669', label: 'Coming soon' },
   },
 ]
 
@@ -271,6 +271,7 @@ const badgeClasses = {
   purple: styles.badgePurple,
   orange: styles.badgeOrange,
   warm: styles.badgeWarm,
+  live: styles.badgeLive,
 }
 
 function ImageCollage({ images, alt }) {
@@ -293,7 +294,7 @@ export default function Work() {
   const [activeTab, setActiveTab] = useState('All')
   const [lightbox, setLightbox] = useState(null)
 
-  const filtered = activeTab === 'All' ? items : items.filter(i => i.tab === activeTab)
+  const filtered = activeTab === 'All' ? items : items.filter(i => i.tab === activeTab || i.tabExtra === activeTab)
 
   function renderMedia(item, isLightbox = false) {
     const cls = isLightbox ? styles.lbImage : styles.image
@@ -373,6 +374,12 @@ export default function Work() {
                 <div className={styles.cardTopRow}>
                   <h3 className={styles.cardTitle}>{item.title}</h3>
                   <span className={`${styles.badge} ${badgeClasses[item.badgeColor]}`}>{item.badge}</span>
+                  {item.tabExtra === '🔴 Live Demos' && (
+                    <span className={styles.livePulse} title="Live demo available">
+                      <span className={styles.liveDot} />
+                      LIVE
+                    </span>
+                  )}
                 </div>
                 <p className={styles.cardSubtitle}>{item.subtitle}</p>
                 <p className={styles.impact}>✦ {item.impact}</p>
