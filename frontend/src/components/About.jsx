@@ -53,12 +53,12 @@ const VALUE_CARDS = [
   {
     icon: '🔬',
     title: 'First-Principles Thinking',
-    body: '10 years of physics research trained me to break complex problems down, form hypotheses, and validate rigorously — an edge most ML engineers don't have.',
+    body: "10 years of physics research trained me to break complex problems down, form hypotheses, and validate rigorously — an edge most ML engineers don't have.",
   },
   {
     icon: '🚀',
     title: 'Ships to Production',
-    body: 'Not just notebooks — I've owned full pipelines end-to-end at Wasimil: data ingestion, model training, Cloud Run deployment, and live monitoring for 150+ clients.',
+    body: "Not just notebooks — I've owned full pipelines end-to-end at Wasimil: data ingestion, model training, Cloud Run deployment, and live monitoring for 150+ clients.",
   },
   {
     icon: '🧩',
