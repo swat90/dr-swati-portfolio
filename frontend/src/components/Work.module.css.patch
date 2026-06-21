@@ -1,0 +1,42 @@
+/* ADD THIS to top of your existing Work.module.css */
+/* Section — deep indigo-tinted dark background, stands out from all other sections */
+
+.section {
+  background: linear-gradient(180deg, #f4f0ff 0%, #ede8ff 100%) !important;
+  padding: 6rem 0 5rem;
+}
+
+/* Cards — white with subtle purple border on hover */
+.card {
+  background: #ffffff !important;
+  border: 1px solid rgba(170,59,255,0.12) !important;
+  transition: box-shadow 0.25s, transform 0.25s, border-color 0.25s !important;
+}
+.card:hover {
+  border-color: rgba(170,59,255,0.35) !important;
+  box-shadow: 0 8px 32px rgba(170,59,255,0.15) !important;
+  transform: translateY(-4px) !important;
+}
+
+/* Tab buttons — styled with purple accent */
+.tab {
+  border-radius: 100px !important;
+  font-size: 0.78rem !important;
+  font-weight: 600 !important;
+  padding: 0.45rem 1.1rem !important;
+  border: 1.5px solid rgba(170,59,255,0.2) !important;
+  background: transparent !important;
+  color: #4a4560 !important;
+  transition: all 0.2s !important;
+}
+.tab:hover {
+  background: rgba(170,59,255,0.08) !important;
+  border-color: rgba(170,59,255,0.4) !important;
+  color: #aa3bff !important;
+}
+.tabActive {
+  background: linear-gradient(135deg, #aa3bff, #6366f1) !important;
+  border-color: transparent !important;
+  color: #fff !important;
+  box-shadow: 0 4px 12px rgba(170,59,255,0.35) !important;
+}

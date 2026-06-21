@@ -1,7 +1,7 @@
 /* ── Section ──────────────────────────────────────────────────────────────── */
 .section {
   padding: 6rem 0 5rem;
-  background: var(--surface-2);   /* blue tint — alternates with About purple tint */
+  background: linear-gradient(180deg, #f0f7ff 0%, #e8f2ff 100%);   /* blue tint */
 }
 
 .container {
@@ -112,7 +112,7 @@
 
 /* ── Card ─────────────────────────────────────────────────────────────────── */
 .card {
-  background: rgba(255,255,255,0.85);
+  background: rgba(255,255,255,0.95);
   backdrop-filter: blur(8px);
   border: 1px solid var(--border);
   border-top: 3px solid;

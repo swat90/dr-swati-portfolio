@@ -1,56 +1,72 @@
+import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import styles from './Hero.module.css'
 
 // ── ADD YOUR PHOTO ─────────────────────────────────────────────────────────
-import profilePhoto from '../assets/swati-photo.png'
-const PHOTO = profilePhoto
-//const PHOTO = null
+// import profilePhoto from '../assets/swati-photo.jpg'
+// const PHOTO = profilePhoto
+const PHOTO = null
 
-
-// ── Animated tagline — words appear one by one ──────────────────────────────
+// ── Animated tagline — renders words one by one ────────────────────────────
 function AnimatedTagline({ text, className }) {
-  // Split on spaces but preserve <em> tags intact
-  const parts = text.split(/(<em>.*?<\/em>|\s+)/).filter(Boolean)
-  let delay = 0.5  // start after name appears
+  // Split into segments: normal text and <em>...</em> chunks
+  const segments = []
+  const emRegex = /<em>(.*?)<\/em>/g
+  let last = 0
+  let match
+
+  while ((match = emRegex.exec(text)) !== null) {
+    if (match.index > last) {
+      segments.push({ type: 'text', content: text.slice(last, match.index) })
+    }
+    segments.push({ type: 'em', content: match[1] })
+    last = match.index + match[0].length
+  }
+  if (last < text.length) {
+    segments.push({ type: 'text', content: text.slice(last) })
+  }
+
+  // Flatten into words with type info
+  const words = []
+  segments.forEach(seg => {
+    const parts = seg.content.split(' ').filter(Boolean)
+    parts.forEach((word, i) => {
+      words.push({ word, type: seg.type })
+      if (i < parts.length - 1) words.push({ word: ' ', type: 'space' })
+    })
+    // Add space between segments
+    words.push({ word: ' ', type: 'space' })
+  })
 
   return (
     <p className={className}>
-      {parts.map((part, i) => {
-        if (/^\s+$/.test(part)) return <span key={i}> </span>
-        const d = delay
-        delay += 0.04
-        if (part.startsWith('<em>')) {
-          const inner = part.replace(/<\/?em>/g, '')
+      {words.map((item, i) => {
+        if (item.type === 'space') return <span key={i}> </span>
+        const delay = 0.5 + i * 0.035
+        const baseStyle = {
+          display: 'inline-block',
+          opacity: 0,
+          animation: `fadeInUp 0.4s ${delay}s ease both`,
+        }
+        if (item.type === 'em') {
           return (
-            <em
+            <strong
               key={i}
               style={{
-                fontStyle: 'normal',
-                fontWeight: 700,
+                ...baseStyle,
                 background: 'linear-gradient(135deg, #aa3bff 0%, #6366f1 100%)',
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
                 backgroundClip: 'text',
-                display: 'inline-block',
-                opacity: 0,
-                animation: `typewriter 0.4s ${d}s ease both`,
+                fontWeight: 700,
               }}
             >
-              {inner}
-            </em>
+              {item.word}
+            </strong>
           )
         }
         return (
-          <span
-            key={i}
-            style={{
-              display: 'inline-block',
-              opacity: 0,
-              animation: `typewriter 0.35s ${d}s ease both`,
-            }}
-          >
-            {part}
-          </span>
+          <span key={i} style={baseStyle}>{item.word}</span>
         )
       })}
     </p>
@@ -62,7 +78,8 @@ export default function Hero() {
 
   return (
     <section className={styles.hero}>
-      <div className={styles.glow} />
+      <div className={styles.blob1} />
+      <div className={styles.blob2} />
 
       <div className={styles.content}>
         {/* Photo */}
@@ -70,9 +87,7 @@ export default function Hero() {
           {PHOTO ? (
             <img src={PHOTO} alt="Dr. Swati Garg" className={styles.photo} />
           ) : (
-            <div className={styles.photoPlaceholder}>
-              <span>SG</span>
-            </div>
+            <div className={styles.photoPlaceholder}><span>SG</span></div>
           )}
           <div className={styles.photoBadge}>Ph.D. · AI Engineer</div>
         </div>
@@ -80,7 +95,6 @@ export default function Hero() {
         <p className={styles.eyebrow}>{t('hero.eyebrow')}</p>
         <h1 className={styles.name}>Dr. Swati Garg</h1>
 
-        {/* Typewriter tagline — words animate in one by one */}
         <AnimatedTagline
           text={t('hero.tagline')}
           className={styles.tagline}
@@ -112,24 +126,24 @@ export default function Hero() {
           <a href="https://scholar.google.com/citations?user=xgJjVMYAAAAJ&hl=en" target="_blank" rel="noreferrer">Google Scholar</a>
         </div>
 
-        {/* Stats bar — 4 stats showing industry + research background */}
+        {/* Stats bar */}
         <div className={styles.stats}>
-          <div className={styles.stat}>
+          <div className={styles.stat} data-color="purple">
             <span className={styles.statNum}>3+</span>
             <span className={styles.statLabel}>{t('hero.stat_years')}</span>
           </div>
           <div className={styles.statDivider} />
-          <div className={styles.stat}>
+          <div className={styles.stat} data-color="teal">
             <span className={styles.statNum}>150+</span>
             <span className={styles.statLabel}>{t('hero.stat_clients')}</span>
           </div>
           <div className={styles.statDivider} />
-          <div className={styles.stat}>
+          <div className={styles.stat} data-color="coral">
             <span className={styles.statNum}>10+</span>
             <span className={styles.statLabel}>{t('hero.stat_research')}</span>
           </div>
           <div className={styles.statDivider} />
-          <div className={styles.stat}>
+          <div className={styles.stat} data-color="amber">
             <span className={styles.statNum}>10+</span>
             <span className={styles.statLabel}>{t('hero.stat_papers')}</span>
           </div>

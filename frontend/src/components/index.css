@@ -1,3 +1,36 @@
+
+/* ── Additional section helpers ──────────────────────────────────────────── */
+:root {
+  --surface:       #f8f4ff;
+  --surface-2:     #f0f7ff;
+  --text-primary:  #0f0a1e;
+  --text-secondary:#4a4560;
+  --text-muted:    #8b82a8;
+  --border:        #e8e4f0;
+  --accent:        #aa3bff;
+  --accent-dark:   #8b2fd4;
+  --accent-glow:   rgba(170,59,255,0.10);
+  --accent-border: rgba(170,59,255,0.25);
+  --teal:          #0d9488;
+  --teal-glow:     rgba(13,148,136,0.10);
+  --coral:         #f43f5e;
+  --coral-glow:    rgba(244,63,94,0.10);
+  --amber:         #f59e0b;
+  --amber-glow:    rgba(245,158,11,0.10);
+  --indigo:        #6366f1;
+  --emerald:       #10b981;
+  --grad-accent:   linear-gradient(135deg, #aa3bff 0%, #6366f1 100%);
+  --shadow-sm:     0 2px 8px rgba(100,60,200,0.08);
+  --shadow-md:     0 6px 24px rgba(100,60,200,0.12);
+  --sans:          'DM Sans', system-ui, sans-serif;
+  --serif:         'DM Serif Display', Georgia, serif;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
 /* ── Design tokens ────────────────────────────────────────────────────────── */
 :root {
   /* Base */

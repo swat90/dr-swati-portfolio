@@ -1,7 +1,7 @@
 /* ── Section ──────────────────────────────────────────────────────────────── */
 .section {
   padding: 7rem 0 5rem;
-  background: var(--surface);   /* light purple tint — different from white hero */
+  background: linear-gradient(180deg, #f8f4ff 0%, #f2eeff 100%);
 }
 
 .container {

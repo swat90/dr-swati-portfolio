@@ -1,0 +1,25 @@
+/* ADD THIS to top of your existing Skills.module.css */
+
+/* Section background — warm amber tint */
+.section {
+  background: linear-gradient(180deg, #fffbf0 0%, #fff8e7 100%) !important;
+  padding: 6rem 0 5rem;
+}
+
+/* Category headers — each gets a color */
+.categoryTitle:nth-child(1) { color: #aa3bff; border-bottom-color: rgba(170,59,255,0.2); }
+.categoryTitle:nth-child(2) { color: #0d9488; border-bottom-color: rgba(13,148,136,0.2); }
+.categoryTitle:nth-child(3) { color: #f43f5e; border-bottom-color: rgba(244,63,94,0.2); }
+.categoryTitle:nth-child(4) { color: #f59e0b; border-bottom-color: rgba(245,158,11,0.2); }
+.categoryTitle:nth-child(5) { color: #6366f1; border-bottom-color: rgba(99,102,241,0.2); }
+
+/* Skill tags — give them a subtle tint */
+.skill {
+  background: rgba(170,59,255,0.06) !important;
+  border-color: rgba(170,59,255,0.15) !important;
+  color: #0f0a1e !important;
+}
+.skill:hover {
+  background: rgba(170,59,255,0.12) !important;
+  border-color: rgba(170,59,255,0.3) !important;
+}
