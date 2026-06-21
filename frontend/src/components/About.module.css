@@ -143,29 +143,30 @@
   gap: 1rem;
   padding: 1.25rem 1.4rem;
   border-radius: 14px;
-  background: var(--bg);
-  border: 1px solid var(--border);
+  border: none;
   border-left: 4px solid transparent;
   opacity: 0;
-  transition: box-shadow 0.2s, transform 0.2s, border-color 0.2s;
+  transition: box-shadow 0.2s, transform 0.2s;
 }
 
-/* Each card gets a distinct accent color */
+/* Card 1 — purple */
 .card:nth-child(1) {
-  border-left-color: var(--accent);
-  background: linear-gradient(135deg, rgba(170,59,255,0.04) 0%, var(--bg) 100%);
+  background: linear-gradient(135deg, #f5edff 0%, #ede0ff 100%);
+  border-left-color: #aa3bff;
 }
+/* Card 2 — teal */
 .card:nth-child(2) {
-  border-left-color: var(--teal);
-  background: linear-gradient(135deg, rgba(13,148,136,0.04) 0%, var(--bg) 100%);
+  background: linear-gradient(135deg, #e6faf8 0%, #d4f4f0 100%);
+  border-left-color: #0d9488;
 }
+/* Card 3 — coral/rose */
 .card:nth-child(3) {
-  border-left-color: var(--coral);
-  background: linear-gradient(135deg, rgba(244,63,94,0.04) 0%, var(--bg) 100%);
+  background: linear-gradient(135deg, #fff0f3 0%, #ffe4ea 100%);
+  border-left-color: #f43f5e;
 }
 
 .card:hover {
-  box-shadow: var(--shadow-md);
+  box-shadow: 0 6px 24px rgba(0,0,0,0.10);
   transform: translateX(-4px);
 }
 
@@ -184,16 +185,18 @@
   justify-content: center;
   background: rgba(170,59,255,0.08);
 }
-.card:nth-child(1) .cardIcon { background: rgba(170,59,255,0.10); }
-.card:nth-child(2) .cardIcon { background: rgba(13,148,136,0.10); }
-.card:nth-child(3) .cardIcon { background: rgba(244,63,94,0.10); }
+.card:nth-child(1) .cardIcon { background: rgba(170,59,255,0.18); }
+.card:nth-child(2) .cardIcon { background: rgba(13,148,136,0.18); }
+.card:nth-child(3) .cardIcon { background: rgba(244,63,94,0.18); }
 
 .cardTitle {
   font-size: 0.88rem;
   font-weight: 700;
-  color: var(--text-primary);
   margin-bottom: 0.3rem;
 }
+.card:nth-child(1) .cardTitle { color: #7c22c4; }
+.card:nth-child(2) .cardTitle { color: #0f766e; }
+.card:nth-child(3) .cardTitle { color: #be123c; }
 
 .cardBody {
   font-size: 0.8rem;

@@ -171,7 +171,10 @@ function ExperienceCard({ exp, index, globalVisible }) {
       {/* Card */}
       <div
         className={styles.card}
-        style={{ borderTopColor: exp.color }}
+        style={{
+          borderTopColor: exp.color,
+          background: `linear-gradient(135deg, ${exp.color}08 0%, #ffffff 60%)`,
+        }}
         onClick={() => setExpanded(e => !e)}
       >
         {/* Header */}
@@ -181,9 +184,9 @@ function ExperienceCard({ exp, index, globalVisible }) {
                   style={{ background: `${exp.color}18`, color: exp.color }}>
               {exp.badge}
             </span>
-            <span className={styles.period}>{exp.period}</span>
+            <span className={styles.period} style={{ color: exp.color, opacity: 0.8 }}>{exp.period}</span>
           </div>
-          <h3 className={styles.role}>{exp.role}</h3>
+          <h3 className={styles.role} style={{ color: exp.color }}>{exp.role}</h3>
           <div className={styles.companyRow}>
             <span className={styles.company}>{exp.company}</span>
             <span className={styles.location}>· {exp.location}</span>
