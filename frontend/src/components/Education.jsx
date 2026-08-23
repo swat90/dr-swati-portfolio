@@ -101,6 +101,9 @@ import photo3 from '../assets/community/vuolle.jpeg'
 import photo4 from '../assets/community/vuolle-golden.jpeg'
 import photo5 from '../assets/community/africans-in-oulu-2.jpeg'
 import photo6 from '../assets/community/africans-in-oulu-3.jpeg'
+import photo7 from '../assets/community/vuolle-2.jpeg'
+import photo8 from '../assets/community/botanical-1.jpeg'
+import photo9 from '../assets/community/botanical-2.jpeg'
 
 const COMMUNITY_PHOTOS = [
   photo1,
@@ -109,6 +112,9 @@ const COMMUNITY_PHOTOS = [
   photo4,
   photo5,
   photo6,
+  photo7,
+  photo8,
+  photo9,
 ]
 
 export default function Education() {
