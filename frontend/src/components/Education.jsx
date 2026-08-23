@@ -56,24 +56,53 @@ const ACHIEVEMENTS = [
 
 const COMMUNITY = [
   {
-    icon: '🌿',
-    role: 'Volunteer Member',
-    org:  'Vuolle Volunteer Community',
+    icon: '👕',
+    role: 'Merchandise Tent Volunteer',
+    org:  'Africans in Oulu',
     location: 'Oulu, Finland',
-    period: '2025 – present',
-    detail: 'Guest welcoming and nature education at community events',
+    period: '2026',
+    detail: '2-day community celebration — sold merchandise, helped set up the tent, and supported general on-site coordination',
+    color: '#f97316',
+  },
+  {
+    icon: '🌿',
+    role: 'Event Coordination Volunteer',
+    org:  'Vuolle Community',
+    location: 'Oulu, Finland',
+    period: '2026 – present',
+    detail: 'Ongoing role supporting varied community events (e.g. Golden Root Fest, park dining, kids\' activity days, UNHOC family support program) — promotion, venue setup, guest welcoming, stall support, and clean-up, adapted to each event\'s needs',
     color: '#10b981',
   },
   {
-    icon: '🗺️',
-    role: 'Volunteer Guide (upcoming)',
-    org:  'VisitOulu',
+    icon: '🎬',
+    role: 'Film Club Volunteer (planning)',
+    org:  'Villa Victor',
     location: 'Oulu, Finland',
-    period: '2026',
-    detail: 'City tourism guide — actively integrating into Oulu community',
+    period: '2026 – present',
+    detail: 'Helping plan a community film screening series to raise awareness about immigrants\' experiences and bring people together through films on shared human and natural themes',
+    color: '#8b5cf6',
+  },
+  {
+    icon: '🗺️',
+    role: 'Kaupunkikaveri (City Friend)',
+    org:  'Visit Oulu',
+    location: 'Oulu, Finland',
+    period: '2026 – present',
+    detail: 'Guiding visitors around Oulu — spontaneous street meetups, scheduled meetup points, and personalized 1:1 matches based on visitor interests',
     color: '#0d9488',
   },
 ]
+
+// Drop event photos in ../assets/community/ and list them here.
+// Example: import photo1 from '../assets/community/africans-in-oulu-1.jpg'
+import photo1 from '../assets/community/vuolle-goldenrootfest.png'
+import photo2 from '../assets/community/africans-in-oulu-1.jpeg'
+import photo3 from '../assets/community/vuolle.jpeg'
+import photo4 from '../assets/community/vuolle-golden.jpeg'
+import photo5 from '../assets/community/africans-in-oulu-2.jpeg'
+import photo6 from '../assets/community/africans-in-oulu-3.jpeg'
+
+const COMMUNITY_PHOTOS = []
 
 export default function Education() {
   const { t } = useTranslation()
@@ -178,6 +207,15 @@ export default function Education() {
               </div>
             ))}
           </div>
+
+          {/* Optional photo strip — small thumbnails, kept subtle on purpose */}
+          {COMMUNITY_PHOTOS.length > 0 && (
+            <div className={styles.communityPhotos}>
+              {COMMUNITY_PHOTOS.map((src, i) => (
+                <img key={i} src={src} alt="" className={styles.communityPhoto} />
+              ))}
+            </div>
+          )}
         </div>
 
       </div>

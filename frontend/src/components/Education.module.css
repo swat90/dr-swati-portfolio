@@ -113,8 +113,22 @@
 .communityPeriod { font-size: 0.72rem; color: #8b82a8; margin: 0.1rem 0; }
 .communityDetail { font-size: 0.75rem; color: #4a4560; line-height: 1.5; margin-top: 0.3rem; }
 
+/* ── Community photo strip (subtle, secondary to card content) ─────────────── */
+.communityPhotos {
+  display: flex; flex-wrap: wrap; gap: 0.6rem;
+  margin-top: 1.25rem; padding-top: 1.25rem;
+  border-top: 1px solid #e8e4f0;
+}
+.communityPhoto {
+  width: 84px; height: 84px; object-fit: cover;
+  border-radius: 8px; border: 1px solid #e8e4f0;
+  opacity: 0.92; transition: transform 0.2s, opacity 0.2s;
+}
+.communityPhoto:hover { transform: scale(1.04); opacity: 1; }
+
 @media (max-width: 768px) {
   .eduGrid { grid-template-columns: 1fr; }
   .communityGrid { grid-template-columns: 1fr; }
+  .communityPhoto { width: 64px; height: 64px; }
   .section { padding: 4rem 0 3rem; }
 }
