@@ -248,22 +248,25 @@ const items = [
   // ── COMING SOON ───────────────────────────────────────────────────────────
  
   {
-    tab: 'Coming Soon',
+    tab: 'Production Systems',
+    tabExtra: '🔴 Live Demos',
     icon: '🍽️',
-    badge: 'In Progress',
-    badgeColor: 'warm',
-    title: 'Restaurant Booking Chatbot',
-    subtitle: 'Agentic AI · Supabase · Intent detection · Reservation management',
-    description: 'Agentic chatbot for restaurant table bookings. Users chat naturally — the bot understands intent (book table, check availability, modify reservation), reads and writes to a Supabase PostgreSQL database, and confirms bookings in conversation.\n\nTwo modes planned: a RAG mode letting users ask questions about the restaurant from its review data, and a booking mode where the agent handles the full reservation flow end-to-end.',
-    impact: 'Full agentic flow · Supabase free tier · Portfolio demo',
+    badge: '🔴 Live Demo',
+    badgeColor: 'live',
+    title: 'Oulu Restaurant AI — Agentic Chatbot',
+    subtitle: 'LangChain · Gemini 2.0 Flash · Supabase · pgvector · CircleCI',
+    description: 'End-to-end agentic AI chatbot for Indian/South Asian restaurants in Oulu. Users chat naturally — the agent calls 8 LangChain tools to search restaurants, browse menus, check real-time availability, place food orders (delivery or pickup), and book tables.\n\nAll bookings and orders saved to live Supabase PostgreSQL. Customers receive styled HTML email receipts via Resend API. Reviews embedded with sentence-transformers and searched via pgvector RAG. CircleCI pipeline runs automated tests on every push.',
+    impact: '8 agent tools · Live DB writes · Email receipts · pgvector RAG · CircleCI CI/CD',
     image: null,
     images: null,
-    tags: ['LangChain', 'Supabase', 'PostgreSQL', 'Streamlit', 'RAG', 'Agentic AI'],
-    note: 'Currently building — will be deployed on Streamlit Cloud.',
-    videoUrl: null,
-    comingSoon: true,
-    placeholder: { icon: '🍽️', color: '#059669', label: 'Coming soon' },
-  },
+    tags: ['LangChain', 'Gemini', 'Supabase', 'pgvector', 'RAG', 'CircleCI', 'Streamlit', 'Resend'],
+    note: 'Live demo — orders and bookings stored in real PostgreSQL. Email receipts sent on every order.',
+    videoUrl: 'YOUR_ZIGHT_LINK_HERE',
+    demo: 'https://oulu-restaurant-chatbot.streamlit.app',
+    demoLabel: 'Open Chatbot ↗',
+    github: 'https://github.com/swat90/oulu-restaurant-chatbot',
+    comingSoon: false,
+    placeholder: { icon: '🍽️', color: '#059669', label: '' },
 ]
 
 const badgeClasses = {
