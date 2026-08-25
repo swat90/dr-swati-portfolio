@@ -52,6 +52,7 @@ const items = [
     note: 'Live dashboard — data updates weekly via automated pipeline.',
     videoUrl: null,
     demo: 'https://oulu-indian-restaurant-sentiment-profile.streamlit.app',
+    github: 'https://github.com/swat90/oulu-restaurant-sentiment',
     demoLabel: 'Open Live Dashboard ↗',
     comingSoon: false,
     placeholder: { icon: '🍜', color: '#2563eb', label: '' },
