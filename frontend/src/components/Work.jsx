@@ -21,6 +21,8 @@ import peace             from '../assets/showcase/peacepal.png'
 import hot             from '../assets/showcase/hotsom.png'
 import fin             from '../assets/showcase/finthrive.jpg'
 import speech             from '../assets/showcase/translate.png'
+import chat            from '../assets/showcase/chatbot-oulu.png'
+
 // ─────────────────────────────────────────────────────────────────────────────
 
 const TABS = [
@@ -257,7 +259,7 @@ const items = [
     subtitle: 'LangChain · Gemini 2.0 Flash · Supabase · pgvector · CircleCI',
     description: 'End-to-end agentic AI chatbot for Indian/South Asian restaurants in Oulu. Users chat naturally — the agent calls 8 LangChain tools to search restaurants, browse menus, check real-time availability, place food orders (delivery or pickup), and book tables.\n\nAll bookings and orders saved to live Supabase PostgreSQL. Customers receive styled HTML email receipts via Resend API. Reviews embedded with sentence-transformers and searched via pgvector RAG. CircleCI pipeline runs automated tests on every push.',
     impact: '8 agent tools · Live DB writes · Email receipts · pgvector RAG · CircleCI CI/CD',
-    image: null,
+    image: chat,
     images: null,
     tags: ['LangChain', 'Gemini', 'Supabase', 'pgvector', 'RAG', 'CircleCI', 'Streamlit', 'Resend'],
     note: 'Live demo — orders and bookings stored in real PostgreSQL. Email receipts sent on every order.',
