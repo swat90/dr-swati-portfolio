@@ -261,12 +261,13 @@ const items = [
     images: null,
     tags: ['LangChain', 'Gemini', 'Supabase', 'pgvector', 'RAG', 'CircleCI', 'Streamlit', 'Resend'],
     note: 'Live demo — orders and bookings stored in real PostgreSQL. Email receipts sent on every order.',
-    videoUrl: 'https://share.zight.com/01a0300c-76db-79a5-a84d-d8e6b21a80ae',
+    videoUrl: 'YOUR_ZIGHT_LINK_HERE',
     demo: 'https://oulu-restaurant-chatbot.streamlit.app',
     demoLabel: 'Open Chatbot ↗',
     github: 'https://github.com/swat90/oulu-restaurant-chatbot',
     comingSoon: false,
     placeholder: { icon: '🍽️', color: '#059669', label: '' },
+  },
 ]
 
 const badgeClasses = {
