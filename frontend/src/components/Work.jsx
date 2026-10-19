@@ -21,6 +21,7 @@ import peace             from '../assets/showcase/peacepal.png'
 import hot             from '../assets/showcase/hotsom.png'
 import fin             from '../assets/showcase/finthrive.jpg'
 import speech             from '../assets/showcase/translate.png'
+import resbot            from '../assets/showcase/chatbot-oulu.png'
 // ─────────────────────────────────────────────────────────────────────────────
 
 const TABS = [
@@ -239,11 +240,11 @@ const items = [
     subtitle: 'LangChain · Gemini 2.0 Flash · Supabase · pgvector · CircleCI',
     description: 'End-to-end agentic AI chatbot for Indian/South Asian restaurants in Oulu. Users chat naturally — the agent calls 8 LangChain tools to search restaurants, browse menus, check real-time availability, place food orders (delivery or pickup), and book tables.\n\nAll bookings and orders saved to live Supabase PostgreSQL. Customers receive styled HTML email receipts via Resend API. Reviews embedded with sentence-transformers and searched via pgvector RAG. CircleCI pipeline runs automated tests on every push.\n\nRestaurants covered include Punjabi Taste, Sauraha, Garam Masala, and Aura Himalaya — an Indo-Chinese restaurant serving Himalayan-spiced wok dishes and tandoor-baked breads in central Oulu.\n\nAlso includes an AI-powered PR review pipeline: a GitHub Actions workflow that calls the Claude API on every pull request, posts structured APPROVE / REQUEST_CHANGES feedback, and blocks merges on critical issues.',
     impact: '8 agent tools · 4 restaurants · Live DB · Email receipts · pgvector RAG · AI PR review · CircleCI CI/CD',
-    image: null,
+    image: resbot,
     images: null,
     tags: ['LangChain', 'Gemini', 'Supabase', 'pgvector', 'RAG', 'CircleCI', 'Streamlit', 'Resend'],
     note: 'Live demo — orders and bookings stored in real PostgreSQL. Email receipts sent on every order.',
-    videoUrl: 'YOUR_ZIGHT_LINK_HERE',
+    videoUrl: 'https://share.zight.com/01a153b7-32a5-7412-b2fc-1d5a44f70b21',
     demo: 'https://oulu-restaurant-chatbot.streamlit.app',
     demoLabel: 'Open Chatbot ↗',
     github: 'https://github.com/swat90/oulu-restaurant-chatbot',
