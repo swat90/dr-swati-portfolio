@@ -21,8 +21,6 @@ import peace             from '../assets/showcase/peacepal.png'
 import hot             from '../assets/showcase/hotsom.png'
 import fin             from '../assets/showcase/finthrive.jpg'
 import speech             from '../assets/showcase/translate.png'
-import chat            from '../assets/showcase/chatbot-oulu.png'
-
 // ─────────────────────────────────────────────────────────────────────────────
 
 const TABS = [
@@ -52,7 +50,6 @@ const items = [
     note: 'Live dashboard — data updates weekly via automated pipeline.',
     videoUrl: null,
     demo: 'https://oulu-indian-restaurant-sentiment-profile.streamlit.app',
-    github: 'https://github.com/swat90/oulu-restaurant-sentiment',
     demoLabel: 'Open Live Dashboard ↗',
     comingSoon: false,
     placeholder: { icon: '🍜', color: '#2563eb', label: '' },
@@ -82,12 +79,12 @@ const items = [
     badgeColor: 'green',
     title: 'Hotel FAQ Chatbot',
     subtitle: 'RAG · pgvector · English & Japanese',
-    description: 'Multilingual RAG chatbot for hotel front desks. Ingests policy documents, room info, dining menus, and FAQs into a pgvector store. Staff and guests ask in English or Japanese and get accurate, grounded answers.\n\nThe collage shows real chat interactions: room upgrade queries, local area recommendations, check-in policy questions, and Japanese-language responses.',
+    description: 'Multilingual RAG chatbot for hotel front desks. Ingests policy documents, room info, dining menus, and FAQs into a pgvector store. Staff and guests ask in English or Japanese and get accurate, grounded answers.\n\nThe screenshots show sample test conversations using synthetic hotel data — no real guest information. Example interactions:\n\n💬 "Do you have a room with an ocean view available for 2 nights?"\n🤖 "Yes! Our Deluxe Ocean Suite is available from July 10–12. Shall I check rates for you?"\n\n💬 「チェックインは何時ですか？」(What time is check-in?)\n🤖 「チェックインは午後3時からです。アーリーチェックインをご希望の場合はお申し付けください。」\n\n💬 "What\'s your cancellation policy for peak season?"\n🤖 "For bookings June–August, cancellations within 72 hours incur a one-night charge. Full refund if cancelled 3+ days in advance."',
     impact: '~50% reduction in front desk queries · Multilingual · pgvector retrieval',
     image: null,
-    images: [faq1, faq2, faq3, faq4],       // → [faq1, faq2, faq3, faq4]
+    images: [faq1, faq2, faq3, faq4],
     tags: ['RAG', 'pgvector', 'FastAPI', 'GCP Cloud Run', 'LangChain', 'Japanese NLP'],
-    note: 'Production system at Wasimil (2024–2025).',
+    note: '⚠ All screenshots use synthetic/test hotel data — no real guest data. Production system at Wasimil (2024–2025).',
     videoUrl: null,
     placeholder: { icon: '💬', color: '#059669', label: 'Add 4 chatbot screenshots' },
   },
@@ -111,38 +108,20 @@ const items = [
   },
 
   // ── DASHBOARDS & AUTOMATION ───────────────────────────────────────────────
-  {
-    tab: 'Dashboards & Automation',
-    icon: '📊',
-    badge: 'Government Project',
-    badgeColor: 'blue',
-    title: 'Bokun Tour Booking Analytics Dashboard',
-    subtitle: 'Power BI · Miyama, Japan · 10+ tour companies',
-    description: 'Interactive Power BI dashboard for Miyama tourism operators. Visualises live Bokun reservation data — booking volumes, revenue by tour type, customer origin countries, seasonal demand, and operator performance. Directly connected to the Make.com reservation automation pipeline below, ensuring always-live data.',
-    impact: '10+ Miyama tour companies · Real-time Bokun data · Government project',
-    image: bokundashImg,        // → bokunImg
-    images: null,
-    tags: ['Power BI', 'Bokun API', 'Tourism Analytics', 'Real-time Data', 'Japan'],
-    note: 'Government project owned by Wasimil. Shown with company permission. Data anonymised.',
-    videoUrl: null,
-    placeholder: { icon: '📊', color: '#2563eb', label: 'Add Bokun dashboard screenshot' },
-  },
-  {
-    tab: 'Dashboards & Automation',
-    icon: '🏘️',
-    badge: 'Government Project',
-    badgeColor: 'blue',
-    title: 'Miyama Town Visitor Feedback Dashboard',
-    subtitle: 'Power BI · Customer satisfaction · Local government',
-    description: 'Multi-page Power BI dashboard for Miyama Town local government. Tracks visitor satisfaction across the region — feedback scores, sentiment trends by season, most-praised and most-complained experiences, and geographic breakdown of visitor origins. Used by the town office to improve local tourism services.',
-    impact: 'Miyama Town government · Seasonal trend analysis',
-    image: miyamaStatsImg,        // → miyamaImg
-    images: null,
-    tags: ['Power BI', 'Customer Feedback', 'Sentiment Analysis', 'Government', 'Japan'],
-    note: 'Government project owned by Wasimil. Shown with company permission. Data anonymised.',
-    videoUrl: null,
-    placeholder: { icon: '🏘️', color: '#7c3aed', label: 'Add Miyama stats dashboard screenshot' },
-  },
+  // HIDDEN: Bokun Tour Booking Analytics Dashboard — government project, actual data, removed from public portfolio
+  // {
+  //   tab: 'Dashboards & Automation',
+  //   title: 'Bokun Tour Booking Analytics Dashboard',
+  //   badge: 'Government Project', badgeColor: 'blue',
+  //   tags: ['Power BI', 'Bokun API', 'Tourism Analytics'],
+  // },
+  // HIDDEN: Miyama Town Visitor Feedback Dashboard — government project with actual municipal data
+  // {
+  //   tab: 'Dashboards & Automation',
+  //   title: 'Miyama Town Visitor Feedback Dashboard',
+  //   badge: 'Government Project', badgeColor: 'blue',
+  //   tags: ['Power BI', 'Customer Feedback', 'Government'],
+  // },
   {
     tab: 'Dashboards & Automation',
     icon: '⚙️',
@@ -155,7 +134,7 @@ const items = [
     image: bokunImg,        // → reservImg
     images: null,
     tags: ['Make.com', 'Bokun Webhooks', 'HubSpot CRM', 'Google Sheets', 'LINE Notify'],
-    note: 'Government project owned by Wasimil. Shown with company permission.',
+    note: 'Automation pipeline built at Wasimil (2024). Screenshot shows scenario structure only — no booking data or client information.',
     videoUrl: null,
     placeholder: { icon: '⚙️', color: '#2563eb', label: 'Export Make.com scenario screenshot' },
   },
@@ -248,8 +227,27 @@ const items = [
     placeholder: { icon: '🛰️', color: '#2563eb', label: '' },
   },
 
+  // ── DASHBOARDS & AUTOMATION (AI reviewer) ────────────────────────────────
+  {
+    tab: 'Dashboards & Automation',
+    icon: '🤖',
+    badge: 'GitHub Actions · Claude API',
+    badgeColor: 'purple',
+    title: 'AI-Powered PR Review Pipeline',
+    subtitle: 'Claude API · GitHub Actions · Automated approval workflow',
+    description: 'A GitHub Actions workflow that automatically reviews every pull request using the Claude API. On each PR open or push, the pipeline fetches the diff, sends it to Claude with repo context, and posts a structured code review directly on the PR.\n\nClaude evaluates logic correctness, missing tests, security issues, and code quality — then returns a verdict: ✅ APPROVE, ❌ REQUEST_CHANGES, or 💬 COMMENT. The workflow exits non-zero on REQUEST_CHANGES, blocking the merge until issues are fixed.\n\nShows agentic AI doing real engineering work autonomously — not just generating code, but gatekeeping it.',
+    impact: 'Auto-reviews every PR · Blocks merges on critical issues · Posts structured feedback · Adds ai-reviewed label',
+    image: null,
+    images: null,
+    tags: ['Claude API', 'GitHub Actions', 'Python', 'CI/CD', 'Agentic AI', 'LLM'],
+    note: 'Live on oulu-restaurant-chatbot repo. Every push to a PR triggers an AI review.',
+    videoUrl: null,
+    github: 'https://github.com/swat90/oulu-restaurant-chatbot',
+    placeholder: { icon: '🤖', color: '#7c3aed', label: '' },
+  },
+
   // ── COMING SOON ───────────────────────────────────────────────────────────
- 
+
   {
     tab: 'Production Systems',
     tabExtra: '🔴 Live Demos',
@@ -260,11 +258,11 @@ const items = [
     subtitle: 'LangChain · Gemini 2.0 Flash · Supabase · pgvector · CircleCI',
     description: 'End-to-end agentic AI chatbot for Indian/South Asian restaurants in Oulu. Users chat naturally — the agent calls 8 LangChain tools to search restaurants, browse menus, check real-time availability, place food orders (delivery or pickup), and book tables.\n\nAll bookings and orders saved to live Supabase PostgreSQL. Customers receive styled HTML email receipts via Resend API. Reviews embedded with sentence-transformers and searched via pgvector RAG. CircleCI pipeline runs automated tests on every push.',
     impact: '8 agent tools · Live DB writes · Email receipts · pgvector RAG · CircleCI CI/CD',
-    image: chat,
+    image: null,
     images: null,
     tags: ['LangChain', 'Gemini', 'Supabase', 'pgvector', 'RAG', 'CircleCI', 'Streamlit', 'Resend'],
     note: 'Live demo — orders and bookings stored in real PostgreSQL. Email receipts sent on every order.',
-    videoUrl: 'https://share.zight.com/01a0300c-76db-79a5-a84d-d8e6b21a80ae',
+    videoUrl: 'YOUR_ZIGHT_LINK_HERE',
     demo: 'https://oulu-restaurant-chatbot.streamlit.app',
     demoLabel: 'Open Chatbot ↗',
     github: 'https://github.com/swat90/oulu-restaurant-chatbot',

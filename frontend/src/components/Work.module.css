@@ -74,14 +74,19 @@
 
 .image { width: 100%; height: 100%; object-fit: contain; display: block; }
 
-/* Collage */
+/* Collage — proper 2×2 grid so all 4 images fill the area evenly */
 .collage {
-  column-count: 2; column-gap: 6px;
-  width: 100%; height: 100%; padding: 6px; background: #f1f5f9;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 4px;
+  width: 100%; height: 100%; padding: 4px; background: #f1f5f9;
+  box-sizing: border-box;
 }
 .collageImg {
-  width: 100%; height: auto; margin-bottom: 6px;
-  border-radius: 6px; display: block; break-inside: avoid;
+  width: 100%; height: 100%;
+  object-fit: cover; object-position: top;
+  border-radius: 4px; display: block;
 }
 
 /* Placeholders */
@@ -199,6 +204,25 @@
 .badgePurple { background: rgba(124,58,237,0.1); border: 1px solid rgba(124,58,237,0.25); color: #7c3aed; }
 .badgeOrange { background: rgba(217,119,6,0.1); border: 1px solid rgba(217,119,6,0.25); color: #d97706; }
 .badgeWarm   { background: rgba(234,88,12,0.1); border: 1px solid rgba(234,88,12,0.25); color: #ea580c; }
+.badgeLive   { background: rgba(220,38,38,0.1); border: 1px solid rgba(220,38,38,0.3); color: #dc2626; }
+
+/* Live pulse indicator */
+.livePulse {
+  display: inline-flex; align-items: center; gap: 0.3rem;
+  font-size: 0.58rem; font-weight: 700; letter-spacing: 0.1em;
+  color: #dc2626; flex-shrink: 0;
+}
+.liveDot {
+  width: 6px; height: 6px; border-radius: 50%;
+  background: #dc2626;
+  box-shadow: 0 0 0 0 rgba(220,38,38,0.4);
+  animation: livePing 1.4s ease-in-out infinite;
+}
+@keyframes livePing {
+  0%   { box-shadow: 0 0 0 0 rgba(220,38,38,0.5); }
+  70%  { box-shadow: 0 0 0 6px rgba(220,38,38,0); }
+  100% { box-shadow: 0 0 0 0 rgba(220,38,38,0); }
+}
 
 /* ═══════════════════════════
    LIGHTBOX
