@@ -129,7 +129,7 @@ const items = [
     badgeColor: 'green',
     title: 'Reservation Pipeline: Bokun → Sheets → HubSpot',
     subtitle: 'Real-time webhooks · 10+ tour companies · LINE notifications',
-    description: 'End-to-end automation for Miyama tour operators. Bokun reservation webhooks processed in real time — bookings logged to Google Sheets, synced to HubSpot CRM. Detects new vs. existing customers, creates or updates deals, and triggers email/LINE notifications. Output feeds directly into the Bokun Power BI dashboard above.',
+    description: 'End-to-end automation for Miyama tour operators. Bokun reservation webhooks processed in real time — bookings logged to Google Sheets, synced to HubSpot CRM. Detects new vs. existing customers, creates or updates deals, and triggers email/LINE notifications. Structured output feeds a Power BI analytics dashboard for tour booking trends.',
     impact: '~90% manual effort saved · Real-time · 10+ tour operators',
     image: bokunImg,        // → reservImg
     images: null,
@@ -227,25 +227,6 @@ const items = [
     placeholder: { icon: '🛰️', color: '#2563eb', label: '' },
   },
 
-  // ── DASHBOARDS & AUTOMATION (AI reviewer) ────────────────────────────────
-  {
-    tab: 'Dashboards & Automation',
-    icon: '🤖',
-    badge: 'GitHub Actions · Claude API',
-    badgeColor: 'purple',
-    title: 'AI-Powered PR Review Pipeline',
-    subtitle: 'Claude API · GitHub Actions · Automated approval workflow',
-    description: 'A GitHub Actions workflow that automatically reviews every pull request using the Claude API. On each PR open or push, the pipeline fetches the diff, sends it to Claude with repo context, and posts a structured code review directly on the PR.\n\nClaude evaluates logic correctness, missing tests, security issues, and code quality — then returns a verdict: ✅ APPROVE, ❌ REQUEST_CHANGES, or 💬 COMMENT. The workflow exits non-zero on REQUEST_CHANGES, blocking the merge until issues are fixed.\n\nShows agentic AI doing real engineering work autonomously — not just generating code, but gatekeeping it.',
-    impact: 'Auto-reviews every PR · Blocks merges on critical issues · Posts structured feedback · Adds ai-reviewed label',
-    image: null,
-    images: null,
-    tags: ['Claude API', 'GitHub Actions', 'Python', 'CI/CD', 'Agentic AI', 'LLM'],
-    note: 'Live on oulu-restaurant-chatbot repo. Every push to a PR triggers an AI review.',
-    videoUrl: null,
-    github: 'https://github.com/swat90/oulu-restaurant-chatbot',
-    placeholder: { icon: '🤖', color: '#7c3aed', label: '' },
-  },
-
   // ── COMING SOON ───────────────────────────────────────────────────────────
 
   {
@@ -256,8 +237,8 @@ const items = [
     badgeColor: 'live',
     title: 'Oulu Restaurant AI — Agentic Chatbot',
     subtitle: 'LangChain · Gemini 2.0 Flash · Supabase · pgvector · CircleCI',
-    description: 'End-to-end agentic AI chatbot for Indian/South Asian restaurants in Oulu. Users chat naturally — the agent calls 8 LangChain tools to search restaurants, browse menus, check real-time availability, place food orders (delivery or pickup), and book tables.\n\nAll bookings and orders saved to live Supabase PostgreSQL. Customers receive styled HTML email receipts via Resend API. Reviews embedded with sentence-transformers and searched via pgvector RAG. CircleCI pipeline runs automated tests on every push.',
-    impact: '8 agent tools · Live DB writes · Email receipts · pgvector RAG · CircleCI CI/CD',
+    description: 'End-to-end agentic AI chatbot for Indian/South Asian restaurants in Oulu. Users chat naturally — the agent calls 8 LangChain tools to search restaurants, browse menus, check real-time availability, place food orders (delivery or pickup), and book tables.\n\nAll bookings and orders saved to live Supabase PostgreSQL. Customers receive styled HTML email receipts via Resend API. Reviews embedded with sentence-transformers and searched via pgvector RAG. CircleCI pipeline runs automated tests on every push.\n\nRestaurants covered include Punjabi Taste, Sauraha, Garam Masala, and Aura Himalaya — an Indo-Chinese restaurant serving Himalayan-spiced wok dishes and tandoor-baked breads in central Oulu.\n\nAlso includes an AI-powered PR review pipeline: a GitHub Actions workflow that calls the Claude API on every pull request, posts structured APPROVE / REQUEST_CHANGES feedback, and blocks merges on critical issues.',
+    impact: '8 agent tools · 4 restaurants · Live DB · Email receipts · pgvector RAG · AI PR review · CircleCI CI/CD',
     image: null,
     images: null,
     tags: ['LangChain', 'Gemini', 'Supabase', 'pgvector', 'RAG', 'CircleCI', 'Streamlit', 'Resend'],
